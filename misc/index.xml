@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>An Attempt to Organise my Mind</title>
-    <link>https://github.com/Furrah/Furrah.github.io/misc/</link>
+    <link>https://furrah.github.io/misc/</link>
     <description>Recent content on An Attempt to Organise my Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://github.com/Furrah/Furrah.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://furrah.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
