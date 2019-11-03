@@ -13,10 +13,10 @@
     
     <item>
       <title>Precision Op Amp Gain Adjustment with DACs</title>
-      <link>https://furrah.github.io/electronics/op-amp-gain-adjustment-dac/</link>
+      <link>https://furrah.github.io/op-amp-gain-adjustment-dac/</link>
       <pubDate>Wed, 30 Oct 2019 22:24:10 +0100</pubDate>
       
-      <guid>https://furrah.github.io/electronics/op-amp-gain-adjustment-dac/</guid>
+      <guid>https://furrah.github.io/op-amp-gain-adjustment-dac/</guid>
       <description>Basic non-inverting operational amplifier design involves a feedback resistor and a gain resistor. These are shown in the figure below as R2 as the feedback resistor and R1 as the gain resistor. The formula for calculating the gain is;
 \begin{align} Gain = \frac{R_2}{R_1} + 1 \end{align}
 It would be nice to adjust the gain of this amplifier. This can be done achieved easily with a potentiometer in place of R1 or R2.</description>
