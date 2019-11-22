@@ -6,10 +6,30 @@
     <description>Recent content on An Attempt to Organise my Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2019 19:21:08 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 23:02:47 +0000</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>XOR Buffer Inverter</title>
+      <link>https://furrah.github.io/xor-buffer-inverter/</link>
+      <pubDate>Fri, 22 Nov 2019 23:02:47 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/xor-buffer-inverter/</guid>
+      <description>XOR gates can be used to form inverters or buffers when a single input is tied to Vdd or Ground. In the figure below, U1 is setup as an inverter, and U2 is setup as a buffer.
+The SN74LVC2G86 is a dual package XOR that can operate at voltages up to 5.5V and deliver up to 50mA of continuous current. Other notable features include a propagation delay between 1.4 and 4.</description>
+    </item>
+    
+    <item>
+      <title>Fish Curry but with Aubergine!</title>
+      <link>https://furrah.github.io/fish-curry-aubergine/</link>
+      <pubDate>Tue, 19 Nov 2019 00:05:54 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/fish-curry-aubergine/</guid>
+      <description>Recipe taken from: https://www.telegraph.co.uk/foodanddrink/recipes/11470131/Rick-Steins-fish-curry-with-snapper-tomato-and-tamarind-recipe.html
+Ingredients  2 tbsp vegetable oil 1 tbsp yellow mustard seeds 1 large onion, finely chopped 3 garlic cloves, crushed 30 fresh curry leaves (from ethnic shops) 2 tsp Kashmiri chilli powder 1/2tsp hot chilli powder (see above) 2 tsp ground coriander 2 tsp turmeric 14oz/400g can chopped tomatoes 3 1/2floz/100ml tamarind water (see below) 2 green chillies, each sliced lengthways into 6 pieces, with seeds (leave these out if you are chilli-sensitive) 1 teaspoon salt lb 9oz/700g snapper fillets, or other white fish, cut into 5cm chunks or 2 aubergines to make it veggie.</description>
+    </item>
     
     <item>
       <title>Andhra Spiced Egg Curry</title>

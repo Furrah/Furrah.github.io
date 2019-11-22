@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.59.0" />
+  
+  <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
+  
+  
+  <title>XOR Buffer Inverter</title>
+  <style>
+.container {
+  max-width: 800px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+
+  margin-bottom: 0.3em;
+}
+img {
+  max-width: 100%;
+}
+.btn {
+  margin-bottom: 0.3em;
+  margin-right : 0.3em;
+
+}
+</style>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>  
+  <body>
+        <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+   
+    
+    
+    <a class="nav-link" href="/"><i data-feather="home"></i> Home</a>
+   
+    
+    
+    <a class="nav-link" href="/electronics/"><i data-feather="cpu"></i> Electronics</a>
+   
+    
+    
+    <a class="nav-link" href="/food/"><i data-feather="heart"></i> Food</a>
+   
+    
+    
+    <a class="nav-link" href="/photography/"><i data-feather="aperture"></i> Photography</a>
+   
+    
+    
+    <a class="nav-link" href="/misc/"><i data-feather="coffee"></i> Misc</a>
+   
+    
+    
+    <a class="nav-link" href="/tags/"><i data-feather="tag"></i> Tags</a>
+  
+  </nav>
+</div> 
+        
+    <div class="container">
+      <main id="main">
+      
+
+<h1>XOR Buffer Inverter</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2019-11-22">Nov 22, 2019</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/xor">XOR</a>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/logic">Logic</a>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/gates">Gates</a>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/buffer">Buffer</a>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/inverter">Inverter</a>
+  
+
+<br><br>
+<p>XOR gates can be used to form inverters or buffers when a single input is tied to Vdd or Ground. In the figure below, U1 is setup as an inverter, and U2 is setup as a buffer.</p>
+
+<p align="center"> 
+<img src="/electronics/images/XOR buffer inverter.png" alt="drawing" width="300">
+</p>
+
+<p>The SN74LVC2G86 is a dual package XOR that can operate at voltages up to 5.5V and deliver up to 50mA of continuous current. Other notable features include a propagation delay between 1.4 and 4.2nS.</p>
+
+<p><a href="https://www.ti.com/lit/ds/symlink/sn74lvc2g86.pdf">https://www.ti.com/lit/ds/symlink/sn74lvc2g86.pdf</a></p>
+
+
+
+
+
+      </main>
+
+    </div>
+    
+<script src="https://furrah.github.io/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>    
+  </body>
+</html>

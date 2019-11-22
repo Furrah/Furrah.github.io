@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inverter on An Attempt to Organise my Mind</title>
+    <link>https://furrah.github.io/tags/inverter/</link>
+    <description>Recent content in Inverter on An Attempt to Organise my Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Nov 2019 23:02:47 +0000</lastBuildDate>
+    
+	<atom:link href="https://furrah.github.io/tags/inverter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>XOR Buffer Inverter</title>
+      <link>https://furrah.github.io/xor-buffer-inverter/</link>
+      <pubDate>Fri, 22 Nov 2019 23:02:47 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/xor-buffer-inverter/</guid>
+      <description>XOR gates can be used to form inverters or buffers when a single input is tied to Vdd or Ground. In the figure below, U1 is setup as an inverter, and U2 is setup as a buffer.
+The SN74LVC2G86 is a dual package XOR that can operate at voltages up to 5.5V and deliver up to 50mA of continuous current. Other notable features include a propagation delay between 1.4 and 4.</description>
+    </item>
+    
+  </channel>
+</rss>

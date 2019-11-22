@@ -4,17 +4,62 @@
   
   <url>
     <loc>https://furrah.github.io/</loc>
-    <lastmod>2019-11-18T19:21:08+01:00</lastmod>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://furrah.github.io/andhra-spiced-egg-curry/</loc>
-    <lastmod>2019-11-18T19:21:08+01:00</lastmod>
+    <loc>https://furrah.github.io/tags/buffer/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/electronics/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/gates/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/inverter/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/logic/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/xor/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/xor-buffer-inverter/</loc>
+    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/fish-curry-aubergine/</loc>
+    <lastmod>2019-11-19T00:05:54+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://furrah.github.io/food/</loc>
+    <lastmod>2019-11-19T00:05:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/andhra-spiced-egg-curry/</loc>
     <lastmod>2019-11-18T19:21:08+01:00</lastmod>
   </url>
   
@@ -59,11 +104,6 @@
   </url>
   
   <url>
-    <loc>https://furrah.github.io/tags/</loc>
-    <lastmod>2019-11-03T14:09:17+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://furrah.github.io/tags/adjustment/</loc>
     <lastmod>2019-10-30T22:24:10+01:00</lastmod>
   </url>
@@ -80,11 +120,6 @@
   
   <url>
     <loc>https://furrah.github.io/tags/dac/</loc>
-    <lastmod>2019-10-30T22:24:10+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://furrah.github.io/electronics/</loc>
     <lastmod>2019-10-30T22:24:10+01:00</lastmod>
   </url>
   
