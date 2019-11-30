@@ -4,17 +4,62 @@
   
   <url>
     <loc>https://furrah.github.io/</loc>
-    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://furrah.github.io/tags/buffer/</loc>
-    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
+    <loc>https://furrah.github.io/tags/ada4096/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/adc/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://furrah.github.io/electronics/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/ltc2990/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/monitoring/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/op-amps/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/power/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/supply/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/voltage-monitring/</loc>
+    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/buffer/</loc>
     <lastmod>2019-11-22T23:02:47+00:00</lastmod>
   </url>
   
@@ -30,11 +75,6 @@
   
   <url>
     <loc>https://furrah.github.io/tags/logic/</loc>
-    <lastmod>2019-11-22T23:02:47+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://furrah.github.io/tags/</loc>
     <lastmod>2019-11-22T23:02:47+00:00</lastmod>
   </url>
   
@@ -60,6 +100,16 @@
   
   <url>
     <loc>https://furrah.github.io/andhra-spiced-egg-curry/</loc>
+    <lastmod>2019-11-18T19:21:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/curry/</loc>
+    <lastmod>2019-11-18T19:21:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/eggs/</loc>
     <lastmod>2019-11-18T19:21:08+01:00</lastmod>
   </url>
   
@@ -306,11 +356,6 @@
   <url>
     <loc>https://furrah.github.io/tags/spectrum/</loc>
     <lastmod>2019-10-27T19:04:09+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://furrah.github.io/tags/curry/</loc>
-    <lastmod>2019-10-27T16:15:25+01:00</lastmod>
   </url>
   
   <url>

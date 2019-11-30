@@ -6,10 +6,73 @@
     <description>Recent content in Tags on An Attempt to Organise my Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Nov 2019 23:02:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 23:54:08 +0000</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ADA4096</title>
+      <link>https://furrah.github.io/tags/ada4096/</link>
+      <pubDate>Fri, 22 Nov 2019 23:54:08 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/tags/ada4096/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ADC</title>
+      <link>https://furrah.github.io/tags/adc/</link>
+      <pubDate>Fri, 22 Nov 2019 23:54:08 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/tags/adc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LTC2990</title>
+      <link>https://furrah.github.io/tags/ltc2990/</link>
+      <pubDate>Fri, 22 Nov 2019 23:54:08 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/tags/ltc2990/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>https://furrah.github.io/tags/monitoring/</link>
+      <pubDate>Fri, 22 Nov 2019 23:54:08 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>op amps</title>
+      <link>https://furrah.github.io/tags/op-amps/</link>
+      <pubDate>Fri, 22 Nov 2019 23:54:08 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/tags/op-amps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>power</title>
+      <link>https://furrah.github.io/tags/power/</link>
+      <pubDate>Fri, 22 Nov 2019 23:54:08 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/tags/power/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>supply</title>
+      <link>https://furrah.github.io/tags/supply/</link>
+      <pubDate>Fri, 22 Nov 2019 23:54:08 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/tags/supply/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Buffer</title>
@@ -53,6 +116,24 @@
       <pubDate>Fri, 22 Nov 2019 23:02:47 +0000</pubDate>
       
       <guid>https://furrah.github.io/tags/xor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curry</title>
+      <link>https://furrah.github.io/tags/curry/</link>
+      <pubDate>Mon, 18 Nov 2019 19:21:08 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/tags/curry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eggs</title>
+      <link>https://furrah.github.io/tags/eggs/</link>
+      <pubDate>Mon, 18 Nov 2019 19:21:08 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/tags/eggs/</guid>
       <description></description>
     </item>
     
@@ -368,15 +449,6 @@
       <pubDate>Sun, 27 Oct 2019 19:04:09 +0100</pubDate>
       
       <guid>https://furrah.github.io/tags/spectrum/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>curry</title>
-      <link>https://furrah.github.io/tags/curry/</link>
-      <pubDate>Sun, 27 Oct 2019 16:15:25 +0100</pubDate>
-      
-      <guid>https://furrah.github.io/tags/curry/</guid>
       <description></description>
     </item>
     
