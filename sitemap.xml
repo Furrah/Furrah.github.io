@@ -4,8 +4,58 @@
   
   <url>
     <loc>https://furrah.github.io/</loc>
-    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/design/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/differential/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/electronics/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/esd/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/guide/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/microstrip/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/single-ended/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/tags/usb/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/usb-design/</loc>
+    <lastmod>2019-11-30T12:59:24+01:00</lastmod>
   </url>
   
   <url>
@@ -15,11 +65,6 @@
   
   <url>
     <loc>https://furrah.github.io/tags/adc/</loc>
-    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://furrah.github.io/electronics/</loc>
     <lastmod>2019-11-22T23:54:08+00:00</lastmod>
   </url>
   
@@ -45,11 +90,6 @@
   
   <url>
     <loc>https://furrah.github.io/tags/supply/</loc>
-    <lastmod>2019-11-22T23:54:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://furrah.github.io/tags/</loc>
     <lastmod>2019-11-22T23:54:08+00:00</lastmod>
   </url>
   
