@@ -37,7 +37,7 @@ The LTC2990 supply voltages are between 3.</description>
     </item>
     
     <item>
-      <title>XOR Buffer Inverter</title>
+      <title>XOR Logic used as a Buffer or Inverter</title>
       <link>https://furrah.github.io/xor-buffer-inverter/</link>
       <pubDate>Fri, 22 Nov 2019 23:02:47 +0000</pubDate>
       
