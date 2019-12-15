@@ -6,10 +6,37 @@
     <description>Recent content in Tags on An Attempt to Organise my Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 12:59:24 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 11:23:58 +0100</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AD5627</title>
+      <link>https://furrah.github.io/tags/ad5627/</link>
+      <pubDate>Sun, 08 Dec 2019 11:23:58 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/tags/ad5627/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DAC</title>
+      <link>https://furrah.github.io/tags/dac/</link>
+      <pubDate>Sun, 08 Dec 2019 11:23:58 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/tags/dac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>level shifting</title>
+      <link>https://furrah.github.io/tags/level-shifting/</link>
+      <pubDate>Sun, 08 Dec 2019 11:23:58 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/tags/level-shifting/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>design</title>
@@ -341,15 +368,6 @@
       <pubDate>Wed, 30 Oct 2019 22:24:10 +0100</pubDate>
       
       <guid>https://furrah.github.io/tags/basics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DAC</title>
-      <link>https://furrah.github.io/tags/dac/</link>
-      <pubDate>Wed, 30 Oct 2019 22:24:10 +0100</pubDate>
-      
-      <guid>https://furrah.github.io/tags/dac/</guid>
       <description></description>
     </item>
     

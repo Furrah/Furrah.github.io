@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
   
-  <title>DAC</title>
+  <title>Using the AD5627 DAC</title>
   <style>
 .container {
   max-width: 800px;
@@ -135,12 +135,8 @@ a {
       <main id="main">
       
 
-<h1>DAC</h1>
+<h1>Using the AD5627 DAC</h1>
 
-<p>
-  <a class="font-125" href="/using-the-ad8627-dac/">Using the AD5627 DAC</a>
-  <br>
-  
 
 <i data-feather="calendar"></i> <time datetime="2019-12-08">Dec 8, 2019</time>
 
@@ -157,48 +153,66 @@ a {
   <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/level-shifting">level shifting</a>
   
 
+<br><br>
 
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The
+<a href=https://www.analog.com/media/en/technical-documentation/data-sheets/AD8625_8626_8627.pdf target="_blank">AD5627RBRMZ (Datasheet)</a> is part of a series of 12/14/16 bit nano DACs with an I2C interface.
+The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C internal reference and can operate upto 5V output.</p>
+
+<h2 id="design">Design</h2>
+
+<p>A typical I2C bus operates at 3.3 Volts. In order to use the full scale output of the DAC (5V) a level shifter is required as the AD5627 sees an I2C high at 0.8 Vcc - 4V.</p>
+
+<p>For this I am using the
+<a href=https://www.nxp.com/docs/en/data-sheet/PCA9306.pdf target="_blank">PCA9306 Bidirectional I2C level shifter (Datasheet)</a></p>
+
+<h2 id="circuit">Circuit</h2>
+
+<p><p align="center">
+<img src="/electronics/images/ad5627.PNG" alt="drawing" width="100%"/>
 </p>
+<br></p>
 
+<h2 id="operation">Operation</h2>
 
+<h4 id="addressing">Addressing</h4>
 
-<p>
-  <a class="font-125" href="/op-amp-gain-adjustment-dac/">Precision Op Amp Gain Adjustment with DACs</a>
-  <br>
-  
+<p>The 5 MSBs are 00011. The address pin is tied to GND which makes the address of the chip 0001111 = 0xF</p>
 
-<i data-feather="calendar"></i> <time datetime="2019-10-30">Oct 30, 2019</time>
+<h4 id="set-internal-reference">Set Internal Reference</h4>
 
-  <br>
-  <i data-feather="tag"></i>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/op-amp">op amp</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/dac">DAC</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/gain">gain</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/adjustment">adjustment</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/operational">operational</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/amplifier">amplifier</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://furrah.github.io/tags/basics">basics</a>
-  
+<p>On start up the internal reference is set to off. To turn it on send the command 3F,00,01</p>
 
+<p>Command - Internal reference setup (on/off )<br>
+Address - Both DACS <br>
+Data - nothing <br>
+LDAC control - The DAC registers are updated after new data is read in. <br></p>
 
-</p>
+<p>Byte 1 - 0x3F - 00111111 <br>
+Byte 2 - 0x00 - no data to send<br>
+Byte 3 - 0x01 - 0000001 <br></p>
 
+<h4 id="setting-output-voltage">Setting Output Voltage</h4>
 
+<p>The voltage is set with a 16 bit data string but as the DAC is 12 bits the last 4 LSBs are not used.</p>
 
+<p>The voltage is set with a command followed by an address.
+command - Write to and update DAC channel n - 011
+address - both DACs - 111</p>
+
+<p>Bit 1 is reserved
+Bit 2 should be set to zero for 3 byte operation of chip</p>
+
+<p>00011111 - 1F</p>
+
+<p>Data - 12 bits to make full scale value FFF so 50% voltage would be 7FF.</p>
+
+<p>last 4 bits should be set to 1 for operation - F</p>
+
+<p>3 bytes = 0x1F,0x7F,0xFF</p>
 
 
 

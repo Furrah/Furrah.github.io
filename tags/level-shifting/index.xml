@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>level shifting on An Attempt to Organise my Mind</title>
+    <link>https://furrah.github.io/tags/level-shifting/</link>
+    <description>Recent content in level shifting on An Attempt to Organise my Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Dec 2019 11:23:58 +0100</lastBuildDate>
+    
+	<atom:link href="https://furrah.github.io/tags/level-shifting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using the AD5627 DAC</title>
+      <link>https://furrah.github.io/using-the-ad8627-dac/</link>
+      <pubDate>Sun, 08 Dec 2019 11:23:58 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/using-the-ad8627-dac/</guid>
+      <description>Introduction The AD5627RBRMZ (Datasheet) is part of a series of 12/14/16 bit nano DACs with an I2C interface. The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C internal reference and can operate upto 5V output.
+Design A typical I2C bus operates at 3.3 Volts. In order to use the full scale output of the DAC (5V) a level shifter is required as the AD5627 sees an I2C high at 0.</description>
+    </item>
+    
+  </channel>
+</rss>
