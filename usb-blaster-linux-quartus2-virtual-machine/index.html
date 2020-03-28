@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.59.0" />
+  
+  <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
+  
+  
+  <title>Rules and Permissions for USB Blaster Setup in Linux Virtual Machine</title>
+  <style>
+.container {
+  max-width: 800px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+
+  margin-bottom: 0.3em;
+}
+img {
+  max-width: 100%;
+}
+.btn {
+  margin-bottom: 0.3em;
+  margin-right : 0.3em;
+
+}
+
+ 
+
+
+a {
+  color: #007bff;
+ }  
+
+
+
+.w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid #ccc}
+
+.w3-table-all tr:nth-child(odd){background-color:#fff}.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
+
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+
+.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}.w3-centered tr th,.w3-centered tr td{text-align:center}
+
+.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+
+.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
+
+ 
+
+
+</style>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+</head>  
+  <body>
+        <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+   
+    
+    
+    <a class="nav-link" href="/"><i data-feather="home"></i> Home</a>
+   
+    
+    
+    <a class="nav-link" href="/electronics/"><i data-feather="cpu"></i> Electronics</a>
+   
+    
+    
+    <a class="nav-link" href="/food/"><i data-feather="heart"></i> Food</a>
+   
+    
+    
+    <a class="nav-link" href="/photography/"><i data-feather="aperture"></i> Photography</a>
+   
+    
+    
+    <a class="nav-link" href="/misc/"><i data-feather="coffee"></i> Misc</a>
+   
+    
+    
+    <a class="nav-link" href="/tags/"><i data-feather="tag"></i> Tags</a>
+  
+  </nav>
+</div> 
+        
+    <div class="container">
+      <main id="main">
+      
+
+<h1>Rules and Permissions for USB Blaster Setup in Linux Virtual Machine</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2020-03-22">Mar 22, 2020</time>
+
+<br><br>
+<p>SOURCE: <a href="https://stackoverflow.com/questions/18704913/unable-to-lock-chain-insufficient-port-permissions">https://stackoverflow.com/questions/18704913/unable-to-lock-chain-insufficient-port-permissions</a></p>
+
+<p>If when jtagconfig is ran</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#40a070">1</span><span style="color:#666">)</span> USB-Blaster varient <span style="color:#666">[</span><span style="color:#40a070">2</span>-1<span style="color:#666">]</span>
+	unable to lock chain<span style="color:#666">(</span>Insufficient port permissions<span style="color:#666">)</span></code></pre></div>
+<p>is returned and Quartus cant program your FPGA. The following steps should fix this problem. An amazing resource on setting up Quartus and other Altera related design software is
+<a href=https://wiki.archlinux.org/index.php/Altera_Design_Software  target="_blank"> Altera Design Software  </a></p>
+
+<p>Before a USB Blaster can be used its jtag rules and permissions must be configured.</p>
+
+<p>First kill jtagd.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo killall -9 jtagd</code></pre></div>
+<p>If jtagconfig is ran whilst jtagd is already running then jtagconfig will have no effect.
+jtagd and jtagconfig can be found in</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/altera/3.1/quartus/bin </code></pre></div>
+<p>And can be executed using</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./jtagd 
+./jtagconfig</code></pre></div>
+<p>As root create file /etc/udev/rules.d/51-altera-usb-blaster.rules</p>
+
+<p>Inside the file, include</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6001&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6002&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6003&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6010&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6810&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span></code></pre></div>
+<p>The five idProducts are all the known USB-Blaster Download Cable USB product IDs (for the Altera vendor ID, 0x09fb).</p>
+
+<p>Then run</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo udevadm control --reload</code></pre></div>
+<p>Now run jtagd.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./jtagd</code></pre></div>
+<p>Before jtagconfig returned</p>
+
+<p>1) USB-Blaster varient [2-1]
+    unable to lock chain(Insufficient port permissions)</p>
+
+<p>Now, it returns</p>
+
+<p>1) USB-Blaster [2-1]
+    020F70DD EP3C120/EP4CE115</p>
+
+<p>Go to Quartus II and open tools -&gt; programming</p>
+
+<p>In hardware setup the USB Blaster should be found as USB-Blaster and not USB-Blaster varient.</p>
+
+<p>Other useful resources <br>
+<a href="https://blog.atomminer.com/fighting-altera-usb-blaster-on-ubuntu/">https://blog.atomminer.com/fighting-altera-usb-blaster-on-ubuntu/</a>
+<a href="https://rileywood.me/2017/02/19/fpga_setup/">https://rileywood.me/2017/02/19/fpga_setup/</a></p>
+
+
+
+
+
+      </main>
+
+    </div>
+    
+<script src="https://furrah.github.io/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>    
+  </body>
+</html>

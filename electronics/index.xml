@@ -6,10 +6,24 @@
     <description>Recent content in Electronics on An Attempt to Organise my Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Dec 2019 11:23:58 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 20:14:00 +0000</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rules and Permissions for USB Blaster Setup in Linux Virtual Machine</title>
+      <link>https://furrah.github.io/usb-blaster-linux-quartus2-virtual-machine/</link>
+      <pubDate>Sun, 22 Mar 2020 20:14:00 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/usb-blaster-linux-quartus2-virtual-machine/</guid>
+      <description>SOURCE: https://stackoverflow.com/questions/18704913/unable-to-lock-chain-insufficient-port-permissions
+If when jtagconfig is ran
+1) USB-Blaster varient [2-1] unable to lock chain(Insufficient port permissions) is returned and Quartus cant program your FPGA. The following steps should fix this problem. An amazing resource on setting up Quartus and other Altera related design software is Altera Design Software 
+Before a USB Blaster can be used its jtag rules and permissions must be configured.
+First kill jtagd.
+sudo killall -9 jtagd If jtagconfig is ran whilst jtagd is already running then jtagconfig will have no effect.</description>
+    </item>
     
     <item>
       <title>Using the AD5627 DAC</title>

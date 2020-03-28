@@ -4,13 +4,28 @@
   
   <url>
     <loc>https://furrah.github.io/</loc>
-    <lastmod>2020-01-16T20:48:00+01:00</lastmod>
+    <lastmod>2020-03-27T20:17:27+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://furrah.github.io/food/</loc>
-    <lastmod>2020-01-16T20:48:00+01:00</lastmod>
+    <lastmod>2020-03-27T20:17:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/palak-paneer/</loc>
+    <lastmod>2020-03-27T20:17:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/electronics/</loc>
+    <lastmod>2020-03-22T20:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://furrah.github.io/usb-blaster-linux-quartus2-virtual-machine/</loc>
+    <lastmod>2020-03-22T20:14:00+00:00</lastmod>
   </url>
   
   <url>
@@ -35,11 +50,6 @@
   
   <url>
     <loc>https://furrah.github.io/tags/dac/</loc>
-    <lastmod>2019-12-08T11:23:58+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://furrah.github.io/electronics/</loc>
     <lastmod>2019-12-08T11:23:58+01:00</lastmod>
   </url>
   
