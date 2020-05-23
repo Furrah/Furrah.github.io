@@ -6,10 +6,37 @@
     <description>Recent content in Electronics on An Attempt to Organise my Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2020 20:14:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2020 21:45:48 +0200</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CMake Setup</title>
+      <link>https://furrah.github.io/cmake-setup/</link>
+      <pubDate>Sat, 23 May 2020 21:45:48 +0200</pubDate>
+      
+      <guid>https://furrah.github.io/cmake-setup/</guid>
+      <description>Installing CMake on macOS and adding to path Cmake can be installed using
+brew install cmake if you have the homebrew package manager installed. If not, go to CMake and download the latest version.
+once installed add to path using the command
+sudo /Applications/CMake.app/Contents/bin/cmake-gui --install=/usr/local/bin Done!</description>
+    </item>
+    
+    <item>
+      <title>Interfacing with FTDIs FT4222H USB 2.0 to Quad SPI / I2C Bridge IC</title>
+      <link>https://furrah.github.io/ftdi-4222-setup/</link>
+      <pubDate>Sat, 23 May 2020 17:20:32 +0200</pubDate>
+      
+      <guid>https://furrah.github.io/ftdi-4222-setup/</guid>
+      <description>A tutorial for interfacing with FTDIs FT4222H USB 2.0 to Quad SPI / I2C Bridge IC on macOS
+Setup Download the relevent drivers for the IC
+D2XX Drivers: FTD2XX
+FT4222H Driver: FT4222H
+ Open D2XX1.4.16.dmg and copy the D2XX folder to your desktop Inside we are interested in 3 files:
+ ftd2xx.h WinTypes.h libftd2xx.1.14.16.dylib  Open a terminal and navigate to the D2XX folder on your desktop
+ Move .</description>
+    </item>
     
     <item>
       <title>Rules and Permissions for USB Blaster Setup in Linux Virtual Machine</title>
