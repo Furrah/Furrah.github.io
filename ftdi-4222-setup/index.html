@@ -51,7 +51,10 @@ a {
   color: #007bff;
  }  
 
-
+td, th {
+    border: 1px solid grey;
+    padding: 10px;
+}
 
 .w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.w3-table-all{border:1px solid #ccc}
 
@@ -99,6 +102,11 @@ a {
   TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
 </script>
+
+
+
+
+
 </head>  
   <body>
         <div id="nav-border" class="container">
@@ -235,7 +243,7 @@ Create a directory called <code>build</code></p>
 
 <p>create a text file called <code>CMakeLists.txt</code></p>
 
-<p>inside add the following</p>
+<p>Inside add the following</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">cmake_minimum_required(VERSION 3.17.2)
 
 project (FT4222H_test)
@@ -247,16 +255,16 @@ include_directories ( /usr/local/include )
 
 add_executable( FT4222H_Version get-version.c ) 
 target_link_libraries( FT4222H_Version ${PROJECT_LINK_LIBS} )</code></pre></div>
-<p>This tells the compiler where to find our files and links them to the project
-inside link directories replace the first directory with the location of your build folder.
-navigate to the build folder and run</p>
+<p>This tells the compiler where to find our files and links them to the project.<br>
+Inside link directories replace the first directory with the location of your build folder.
+Navigate to the build folder and run</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cmake ..
 make</code></pre></div>
 <p>The file <code>FT4222H_Version</code> should now be built.</p>
 
 <p>execute with</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./FT4222H_Version</code></pre></div>
-<p>and again the following should be returned</p>
+<p>Again, the following should be returned</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Device <span style="color:#40a070">0</span>: <span style="color:#4070a0">&#39;FT4222 A&#39;</span>
   Chip version: <span style="color:#40a070">42220400</span>, LibFT4222 version: <span style="color:#40a070">01040409</span></code></pre></div>
 

@@ -17,8 +17,8 @@
       <pubDate>Sun, 08 Dec 2019 11:23:58 +0100</pubDate>
       
       <guid>https://furrah.github.io/using-the-ad8627-dac/</guid>
-      <description>Introduction The AD5627RBRMZ (Datasheet) is part of a series of 12/14/16 bit nano DACs with an I2C interface. The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C internal reference and can operate upto 5V output.
-Design A typical I2C bus operates at 3.3 Volts. In order to use the full scale output of the DAC (5V) a level shifter is required as the AD5627 sees an I2C high at 0.</description>
+      <description>Introduction The AD5627RBRMZ (Datasheet) is part of a series of 12/14/16 bit nano DACs with an I2C interface. The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C internal reference and can operate upto 5V.
+Design The DAC requires a high I2C level to be 0.8 * Vcc, which is 4V if we are interested in using the full capability of the DAC. In this design the I2C is operating on a 3.</description>
     </item>
     
     <item>
