@@ -66,6 +66,56 @@ td, th {
     }
 }
 
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #000;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+.card-img{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card{
+  border-radius: 10px;
+}
+
+ 
+button.copybtn {
+  webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  opacity: .15;
+  padding: 2px 6px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+ 
+    
+ 
+div.highlight .copybtn:hover {
+    opacity: 1;
+    border-color: #51a7e8;
+}
+div.highlight .copybtn:after {
+    opacity: 1;
+}
+div.highlight {
+    position: relative;
+}
 </style>
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -99,7 +149,8 @@ td, th {
 
 
 
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 </head>  
   
   <body>
@@ -132,6 +183,7 @@ td, th {
   
   </nav>
 </div> 
+
         
     <div class="container">
       <main id="main">
@@ -142,7 +194,7 @@ td, th {
 
 <i data-feather="calendar"></i> <time datetime="2020-03-31">Mar 31, 2020</time>
 
-
+        
 <br><br>
 
 
@@ -198,6 +250,36 @@ td, th {
 <script src="https://furrah.github.io/js/feather.min.js"></script>
 <script>
   feather.replace()
-</script>    
+</script>  
+    <script>
+  function addCopyButtonToCode(){
+    var allCodeBlocksElements = $( "div.highlight pre" );
+
+    allCodeBlocksElements.each(function(ii) {
+
+      var currentId = "codeblock" + (ii + 1);
+      $(this).attr('id', currentId);
+
+      var clipButton = '<button class="btn copybtn" data-clipboard-target="#' +
+        currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="30" alt="Copy to clipboard"></button>';
+      $(this).after(clipButton);
+    });
+
+    var clipboard = new Clipboard('.btn');
+    clipboard.on('success', function(e) {
+      setTimeout(function() {
+        
+        e.clearSelection();
+      }, 250);
+    });
+    clipboard.on('error', function(e) {
+      $(e.trigger).text("Can't in Safari");
+    });
+  }
+  $(document).ready(function () {
+    
+    addCopyButtonToCode();
+  });
+</script>  
   </body>
 </html>
