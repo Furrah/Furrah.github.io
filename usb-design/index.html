@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.59.0" />
+  <meta name="generator" content="Hugo 0.74.1" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -56,8 +56,6 @@ td, th {
     padding: 10px;
 }
 
-
- 
 @media (min-width: 34em) {
     .card-columns {
         -webkit-column-count:3;
@@ -124,6 +122,14 @@ div.highlight .copybtn:after {
 div.highlight {
     position: relative;
 }
+
+
+
+
+
+
+
+
 </style>
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -153,6 +159,7 @@ div.highlight {
   TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
 </script>
+
 
 
 
@@ -229,19 +236,14 @@ div.highlight {
   
 
 <br><br>
-
-
 <h2 id="key-features">Key features</h2>
-
 <ul>
 <li>USB connector</li>
 <li>ESD protection</li>
 <li>Differential microstrip design for USB</li>
 </ul>
-
 <h2 id="usb-connector">USB Connector</h2>
-
-<p>For this particular design I have chosen a USB-B female connector from Mouser.
+<p>For this particular design I have chosen a USB-B female connector from Mouser.</p>
 <div>
   <table class="w3-table-all w3-card-4" table style="width:70%" align="center">
     <tr>
@@ -255,35 +257,26 @@ div.highlight {
       <td>TE Connectivity</td>
     </tr>
   </table>
-</div></p>
-
-<p><br></p>
-
+</div>
+<br>
 <p align="center"> 
 <img src="/electronics/images/usb-b.png" alt="drawing" width="100">
 </p>
-
 <p>The USB connector datasheet can be found
 <a href="https://www.mouser.ch/datasheet/2/418/NG_DS_7-1773442-0_0306-1258760.pdf" target="_blank">here.</a></p>
-
 <h2 id="esd-protection">ESD Protection</h2>
-
 <p>The
 <a href="https://assets.nexperia.com/documents/data-sheet/PRTR5V0U4Y.pdf" target="_blank">PRTR5V0U4Y</a>
 is designed to protect Input/Output (I/O) ports that are sensitive to capacitive load, such as USB 2.0, Ethernet and DVI from destruction by ElectroStaticDischarge (ESD). It provides protection to downstream signal and supply components from ESD voltages as high as ±8 kV (contact discharge).The PRTR5V0U4Y incorporates four pairs of ultra-low capacitance rail-to-rail diodes plus a Zener diode. The rail-to-rail diodes are connected to the Zener diode which allows ESD protection to be independent of supply voltage. The PRTR5V0U4Y is fabricated using thin film-on-silicon technology integrating four ultra-low capacitance rail-to-rail ESD protection diodes in a miniature 6-lead SOT363 package.</p>
-
 <p align="center"> 
 <img src="/electronics/images/USB-routing.PNG" alt="drawing" width="700">
 </p>
-
 <h2 id="microstrip-design">Microstrip Design</h2>
-
 <p><a href=https://www.analog.com/en/analog-dialogue/articles/switching-in-usb-consumer-applications.html target="_blank">USB Design</a>
-requires 45 Ohm single ended traces with a differential impedance of 90 Ohm. I like to use the calculators from www.mantaro.com to design microstrip lines. The differential microstrip calculator can be found <a href=https://www.mantaro.com/resources/impedance-calculator.htm
- target="_blank">here.</a>
+requires 45 Ohm single ended traces with a differential impedance of 90 Ohm. I like to use the calculators from <a href="http://www.mantaro.com">www.mantaro.com</a> to design microstrip lines. The differential microstrip calculator can be found <a href=https://www.mantaro.com/resources/impedance-calculator.htm
+target="_blank">here.</a>
 The table below shows some initial design parameters to start the design.</p>
-
-<p><table class="w3-table-all w3-card-4" table style="width:50%" align="center">
+<table class="w3-table-all w3-card-4" table style="width:50%" align="center">
   <tr>
     <th>Parameter</th>
     <th>Value</th>
@@ -320,8 +313,8 @@ The table below shows some initial design parameters to start the design.</p>
     <td>Single Ended Line Impedance</td>
     <td>45.228</td>
   </tr>
-</table><br />
-<br></p>
+</table>  
+<br>
 
 
 

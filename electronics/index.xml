@@ -33,9 +33,7 @@ sudo /Applications/CMake.app/Contents/bin/cmake-gui --install=/usr/local/bin Don
 Setup Download the relevent drivers for the IC
 D2XX Drivers: FTD2XX
 FT4222H Driver: FT4222H
- Open D2XX1.4.16.dmg and copy the D2XX folder to your desktop Inside we are interested in 3 files:
- ftd2xx.h WinTypes.h libftd2xx.1.14.16.dylib  Open a terminal and navigate to the D2XX folder on your desktop
- Move .</description>
+ Open D2XX1.4.16.dmg and copy the D2XX folder to your desktop Inside we are interested in 3 files:   ftd2xx.h WinTypes.h libftd2xx.1.14.16.dylib  Open a terminal and navigate to the D2XX folder on your desktop Move .h files to /usr/local/include  mv ftd2xx.</description>
     </item>
     
     <item>
@@ -68,9 +66,8 @@ Design The DAC requires a high I2C level to be 0.8 * Vcc, which is 4V if we are 
       <pubDate>Sat, 30 Nov 2019 12:59:24 +0100</pubDate>
       
       <guid>https://furrah.github.io/usb-design/</guid>
-      <description>Key features  USB connector ESD protection Differential microstrip design for USB  USB Connector For this particular design I have chosen a USB-B female connector from Mouser.   Mouser # Manufacturer # Manufacturer    571-292304-1 292304-1  TE Connectivity   
-
-The USB connector datasheet can be found here.
+      <description>Key features  USB connector ESD protection Differential microstrip design for USB  USB Connector For this particular design I have chosen a USB-B female connector from Mouser.
+  Mouser # Manufacturer # Manufacturer    571-292304-1 292304-1  TE Connectivity    The USB connector datasheet can be found here.
 ESD Protection The PRTR5V0U4Y is designed to protect Input/Output (I/O) ports that are sensitive to capacitive load, such as USB 2.</description>
     </item>
     
@@ -114,7 +111,7 @@ It would be nice to adjust the gain of this amplifier. This can be done achieved
       <pubDate>Sun, 27 Oct 2019 20:04:40 +0100</pubDate>
       
       <guid>https://furrah.github.io/i2c-wishbone-interface-fpga/</guid>
-      <description>Requirements  Lua 5.14+ (recommended 5.15) (https://github.com/rjpcomputing/luaforwindows/releases/tag/v5.1.5-52) wbgen2 https://www.ohwr.org/project/wishbone-gen MCP2221A USB2.0 to I2C/UART Protocol Converter with GPIO  Any USB to I2C device will work.   Creating an I2C wishbone interface for FPGA The wishbone interface acts as a bridge between the FPGA and external signals containing a master and a slave. In this example the FPGA will be acting as an I2C slave with two registers;
+      <description>Requirements  Lua 5.14+ (recommended 5.15) (https://github.com/rjpcomputing/luaforwindows/releases/tag/v5.1.5-52) wbgen2 https://www.ohwr.org/project/wishbone-gen MCP2221A USB2.0 to I2C/UART Protocol Converter with GPIO Any USB to I2C device will work.  Creating an I2C wishbone interface for FPGA The wishbone interface acts as a bridge between the FPGA and external signals containing a master and a slave. In this example the FPGA will be acting as an I2C slave with two registers;
  1 read/write 1 read only.</description>
     </item>
     
@@ -126,7 +123,7 @@ It would be nice to adjust the gain of this amplifier. This can be done achieved
       <guid>https://furrah.github.io/integrated-noise-spectrum/</guid>
       <description>Reference material: Texas Instruments - Op Amp Technical Overview
 When developing precision DC systems BJT transistors are the way to go. Be careful when selecting an op amp based on its datasheet noise characteristics. At DC we are interested in the 1/f noise, which as the name suggests increases as we approach DC. an example is shown below comparing the JFET input OPA827 and the BJT input OPA227.
-Figure1 - CMOS, BJT, and JFET flicker noise</description>
+*Figure1 - CMOS, BJT, and JFET flicker noise*</description>
     </item>
     
   </channel>

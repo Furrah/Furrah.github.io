@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.59.0" />
+  <meta name="generator" content="Hugo 0.74.1" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -56,8 +56,6 @@ td, th {
     padding: 10px;
 }
 
-
- 
 @media (min-width: 34em) {
     .card-columns {
         -webkit-column-count:3;
@@ -124,6 +122,14 @@ div.highlight .copybtn:after {
 div.highlight {
     position: relative;
 }
+
+
+
+
+
+
+
+
 </style>
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -153,6 +159,7 @@ div.highlight {
   TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
 </script>
+
 
 
 
@@ -230,55 +237,39 @@ div.highlight {
 
 <br><br>
 <p>Basic non-inverting operational amplifier design involves a feedback resistor and a gain resistor. These are shown in the figure below as R2 as the feedback resistor and R1 as the gain resistor. The formula for calculating the gain is;</p>
-
 <p>\begin{align}
 Gain = \frac{R_2}{R_1} + 1
 \end{align}</p>
-
 <p align="center"> 
 <img src="/electronics/images/op-amp-non-inv.png">
 </p>
-
 <p>It would be nice to adjust the gain of this amplifier. This can be done achieved easily with a potentiometer in place of R1 or R2. Digital potentiometers are even an option for remote control of the gain. Potentiometers though, give only a coarse adjustment.</p>
-
 <p>Here, we will investigate the use of a digital to analogue converter (DAC) to fine tune the gain of an amplifier.
 In the image below, $V_2$ is a DAC.</p>
-
 <p align="center"> 
 <img src="/electronics/images/op-amp-gain-adjustment.png">
 </p>
-
 <p>The op amp will try its best to ensure that the inverting terminal voltage is equal to the non inverting terminal. It does this by increasing or decreasing its current output into the feedback loop resulting in a potential across the feedback resistors.</p>
-
 <p>In an ideal world no current flows into the inverting terminal of the op amp so we can ignore this path and assume the central node is equal to $V_1$. This leaves us with current flow through $R_1$, $R_2$ and $R_3$</p>
-
 <p>This circuit can be solved using Kirchoff&rsquo;s current law. It states that all current entering a node must exit. I.e the sum of currents must be equal to zero.</p>
-
 <p>Derivation</p>
-
 <p>\begin{align}
 \frac{V_1 - V_o}{R_2} + \frac{V_1}{R_1} + \frac{V_1 - V_2}{R_3} = 0
 \end{align}</p>
-
 <p>\begin{align}
 \frac{V_1}{R_2} - \frac{V_o}{R_2} + \frac{V_1}{R_1} + \frac{V_1}{R_3} - \frac{V_2}{R_3} = 0
 \end{align}</p>
-
 <p>\begin{align}
 V_1(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}) - \frac{V_o}{R_2} - \frac{V_2}{R_3} = 0
 \end{align}</p>
-
 <p>\begin{align}
 R_2 V_1(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}) - \frac{V_2 R_2}{R_3}  = V_o
 \end{align}</p>
-
 <p>\begin{align}
 V_1(1 + \frac{R_2}{R_1} + \frac{R_2}{R_3}) - \frac{V_2 R_2}{R_3}  = V_o
 \end{align}</p>
-
 <p>Lets use some real numbers and components. DACs range in their resolution and supply voltages so lets go with a 12-bit 5V DAC.
 R1 = R2 = 2k5, R3 = 200k, and V1 = 1V.</p>
-
 <p>The full range (0-5V) from the DAC would give a voltage output between 1.95V to 2.0125V in steps of 15.2$\mu$V (2.0125 - 1.95)/2<sup>12</sup>.</p>
 
 

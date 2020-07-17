@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.59.0" />
+  <meta name="generator" content="Hugo 0.74.1" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -56,8 +56,6 @@ td, th {
     padding: 10px;
 }
 
-
- 
 @media (min-width: 34em) {
     .card-columns {
         -webkit-column-count:3;
@@ -124,6 +122,14 @@ div.highlight .copybtn:after {
 div.highlight {
     position: relative;
 }
+
+
+
+
+
+
+
+
 </style>
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -153,6 +159,7 @@ div.highlight {
   TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
 </script>
+
 
 
 
@@ -217,36 +224,23 @@ div.highlight {
   
 
 <br><br>
-
-
 <h2 id="introduction">Introduction</h2>
-
 <p>The
 <a href=https://www.analog.com/media/en/technical-documentation/data-sheets/AD5627R_5647R_5667R_5627_5667.pdf target="_blank">AD5627RBRMZ (Datasheet)</a> is part of a series of 12/14/16 bit nano DACs with an I2C interface.
 The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C internal reference and can operate upto 5V.</p>
-
 <h2 id="design">Design</h2>
-
 <p>The DAC requires a high I2C level to be 0.8 * Vcc, which is 4V if we are interested in using the full capability of the DAC. In this design the I2C is operating on a 3.3 Volt bus, therefore, a bidirectional I2C level shiter is required.</p>
-
 <p>For this I am using the
 <a href=https://www.nxp.com/docs/en/data-sheet/PCA9306.pdf target="_blank">PCA9306 Bidirectional I2C level shifter (Datasheet)</a></p>
-
 <h2 id="circuit">Circuit</h2>
-
-<p><p align="center">
+<p align="center"> 
 <img src="/electronics/images/ad5627.PNG" alt="drawing" width="100%"/>
 </p>
-<br></p>
-
+<br>
 <h2 id="operation">Operation</h2>
-
 <h4 id="addressing">Addressing</h4>
-
 <p>The 7 bit address is set by the fist 5 MSBs 00011 and the state of the ADDR pin.</p>
-
-<p><center></p>
-
+<center>
 <table>
 <thead>
 <tr>
@@ -255,20 +249,17 @@ The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C inte
 <th align="center">A0</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>VDD</td>
 <td align="center">0</td>
 <td align="center">0</td>
 </tr>
-
 <tr>
 <td>No Connection</td>
 <td align="center">1</td>
 <td align="center">0</td>
 </tr>
-
 <tr>
 <td>GND</td>
 <td align="center">1</td>
@@ -276,47 +267,32 @@ The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C inte
 </tr>
 </tbody>
 </table>
-
-<p></center></p>
-
-<p><br>
-I have tied the pin to GND  so the address is 0011 11 - 0xF</p>
-
+</center>
+<br>
+I have tied the pin to GND  so the address is 0011 11 - 0xF
 <h4 id="set-internal-reference">Set Internal Reference</h4>
-
 <p>On start up the internal reference is set to off. To turn it on send the command 0x38,0x00,0x01</p>
-
 <p>Command - Internal reference setup (on/off) - 111 <br>
 Address - Both DACS <br>
 Data - nothing <br>
 LDAC control - The DAC registers are updated after new data is read in. <br></p>
-
 <p>Byte 1 - 0x3F - 00111111 <br>
 Byte 2 - 0x00 - no data to send<br>
 Byte 3 - 0x01 - 0000001 <br></p>
-
-<p><p align="center">
+<p align="center"> 
 <img src="/electronics/images/ad5627 internal reference setup.png" alt="drawing" width="100%"/>
 </p>
-<br></p>
-
+<br>
 <h4 id="setting-output-voltage">Setting Output Voltage</h4>
-
 <p>The voltage is set with a 16 bit data string but as the DAC is 12 bits the last 4 LSBs are not used.</p>
-
 <p>The voltage is set with a command followed by an address.
 command - Write to and update DAC channel n - 011
 address - both DACs - 111</p>
-
 <p>Bit 1 is reserved
 Bit 2 should be set to zero for 3 byte operation of chip</p>
-
 <p>00011111 - 1F</p>
-
 <p>Data - 12 bits to make full scale value FFF so 50% voltage would be 7FF.</p>
-
 <p>last 4 bits should be set to 1 for operation - F</p>
-
 <p>3 bytes = 0x1F,0x7F,0xFF</p>
 
 

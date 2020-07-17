@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.59.0" />
+  <meta name="generator" content="Hugo 0.74.1" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -56,8 +56,6 @@ td, th {
     padding: 10px;
 }
 
-
- 
 @media (min-width: 34em) {
     .card-columns {
         -webkit-column-count:3;
@@ -124,6 +122,14 @@ div.highlight .copybtn:after {
 div.highlight {
     position: relative;
 }
+
+
+
+
+
+
+
+
 </style>
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -153,6 +159,7 @@ div.highlight {
   TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
 </script>
+
 
 
 
@@ -204,79 +211,61 @@ div.highlight {
 <i data-feather="calendar"></i> <time datetime="2020-05-23">May 23, 2020</time>
 
 <br><br>
-
-
 <p>A tutorial for interfacing with FTDIs FT4222H USB 2.0 to Quad SPI / I2C Bridge IC on macOS</p>
-
 <h2 id="setup">Setup</h2>
-
 <p>Download the relevent drivers for the IC</p>
-
 <p>D2XX Drivers: <a href=https://www.ftdichip.com/Drivers/D2XX.htm target="_blank">FTD2XX</a></p>
-
 <p>FT4222H Driver: <a href=https://www.ftdichip.com/Products/ICs/FT4222H.html target="_blank">FT4222H</a></p>
-
 <ol>
 <li>Open D2XX1.4.16.dmg and copy the D2XX folder to your desktop</li>
-
-<li><p>Inside we are interested in 3 files:</p>
-
+<li>Inside we are interested in 3 files:</li>
+</ol>
 <ul>
 <li>ftd2xx.h</li>
 <li>WinTypes.h</li>
 <li>libftd2xx.1.14.16.dylib</li>
-</ul></li>
-
-<li><p>Open a terminal and navigate to the D2XX folder on your desktop</p></li>
-
-<li><p>Move .h files to /usr/local/include</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv ftd2xx.h WinTypes.h /usr/local/include </code></pre></div></li>
-
-<li><p>Move &lsquo;.dylib&rsquo; file to /usr/local/lib</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv libftd2xx.1.14.16.dylib /usr/local/lib </code></pre></div></li>
-
-<li><p>Create second folder on Desktop and copy contents of libft4222.1.4.4.14.dmg to it</p></li>
-
-<li><p>move <code>libft4222.1.4.4.14.dylib</code> to /usr/local/lib</p></li>
-
-<li><p>move files <code>libboost_system.dylib</code> and <code>libboost_thread-mt.dylib</code> located in boost_libs to /usr/local/lib</p></li>
-
-<li><p>move <code>libft4222.h</code> to /usr/local/include</p></li>
-
-<li><p>Create symbolic links for <code>libft4222.1.4.4.14.dylib</code> and <code>libftd2xx.1.4.16.dylib</code></p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo -ln -sf /usr/local/lib/libft4222.1.4.4.14.dylib /usr/local/lib/libft4222.dylib
-sudo -ln -sf /usr/local/lib/libftd2xx.1.4.16.dylib /usr/local/lib/libftd2xx.dylib</code></pre></div></li>
+</ul>
+<ol start="3">
+<li>Open a terminal and navigate to the D2XX folder on your desktop</li>
+<li>Move .h files to /usr/local/include</li>
 </ol>
-
-<h4 id="notes-on-installing">Notes on installing</h4>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv ftd2xx.h WinTypes.h /usr/local/include 
+</code></pre></div><ol start="5">
+<li>Move &lsquo;.dylib&rsquo; file to /usr/local/lib</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv libftd2xx.1.14.16.dylib /usr/local/lib 
+</code></pre></div><ol start="6">
+<li>Create second folder on Desktop and copy contents of libft4222.1.4.4.14.dmg to it</li>
+<li>move <code>libft4222.1.4.4.14.dylib</code> to /usr/local/lib</li>
+<li>move files <code>libboost_system.dylib</code> and <code>libboost_thread-mt.dylib</code> located in boost_libs to /usr/local/lib</li>
+<li>move <code>libft4222.h</code> to /usr/local/include</li>
+<li>Create symbolic links for <code>libft4222.1.4.4.14.dylib</code> and <code>libftd2xx.1.4.16.dylib</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo -ln -sf /usr/local/lib/libft4222.1.4.4.14.dylib /usr/local/lib/libft4222.dylib
+sudo -ln -sf /usr/local/lib/libftd2xx.1.4.16.dylib /usr/local/lib/libftd2xx.dylib
+</code></pre></div><h4 id="notes-on-installing">Notes on installing</h4>
 <p>If using a device with standard FTDI vendor and product identifiers, install D2xxHelper to prevent mac OS from claiming the device as a serial port (locking out D2XX programs). This will prevent the device being used with the VCP driver as a standard COM port. D2xxHelper can be found here : <a href=https://www.ftdichip.com/Drivers/D2XX/MacOSX/D2xxHelper_v2.0.0.pkg target="_blank">D2xxHelper</a></p>
-
 <h2 id="testing">Testing</h2>
-
 <h4 id="1-find-chip-version">1. Find chip version</h4>
-
 <p>Inside libft4222.1.4.4.14.dmg is a folder called examples with a .c file called <code>get-version.c</code>.
 using the following command</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cc get-version.c -lft4222 -lftd2xx  -Wl,-L/usr/local/lib -o version.out</code></pre></div>
-<p>If compilation has gone well and all libraries have been found <code>version.out</code> will have been made.
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cc get-version.c -lft4222 -lftd2xx  -Wl,-L/usr/local/lib -o version.out
+</code></pre></div><p>If compilation has gone well and all libraries have been found <code>version.out</code> will have been made.
 execute using</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./version.out</code></pre></div>
-<p>This should return something similar to this</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Device <span style="color:#40a070">0</span>: <span style="color:#4070a0">&#39;FT4222 A&#39;</span>
-  Chip version: <span style="color:#40a070">42220400</span>, LibFT4222 version: <span style="color:#40a070">01040409</span></code></pre></div>
-<h3 id="2-accessing-eeprom">2. Accessing EEPROM</h3>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./version.out
+</code></pre></div><p>This should return something similar to this</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Device 0: <span style="color:#4070a0">&#39;FT4222 A&#39;</span>
+  Chip version: 42220400, LibFT4222 version: <span style="color:#40a070">01040409</span>
+</code></pre></div><h3 id="2-accessing-eeprom">2. Accessing EEPROM</h3>
 <p>Create a folder in the root directory of D2XX called <code>build</code> and move <code>libftd2xx.a</code> into it.</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir build
-mv libftd2xx.a build</code></pre></div>
-<p>now navigate to the folder <code>Samples</code></p>
-
+mv libftd2xx.a build
+</code></pre></div><p>now navigate to the folder <code>Samples</code></p>
 <p>Inside the D2XX folder navigate to the folder samples and execute <code>make</code></p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make</code></pre></div>
-<p>once this has complete navigate to D2XX/Samples/EEPROM/read and exectute read</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./read</code></pre></div>
-<p>This should return something similar to this</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make
+</code></pre></div><p>once this has complete navigate to D2XX/Samples/EEPROM/read and exectute read</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./read
+</code></pre></div><p>This should return something similar to this</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#bb60d5">Signature1</span> <span style="color:#666">=</span> <span style="color:#40a070">0</span>
 <span style="color:#bb60d5">Signature2</span> <span style="color:#666">=</span> -1
 <span style="color:#bb60d5">Version</span> <span style="color:#666">=</span> <span style="color:#40a070">0</span>
@@ -290,14 +279,11 @@ mv libftd2xx.a build</code></pre></div>
 <span style="color:#bb60d5">PnP</span> <span style="color:#666">=</span> <span style="color:#40a070">1</span>
 <span style="color:#bb60d5">SelfPowered</span> <span style="color:#666">=</span> <span style="color:#40a070">0</span>
 <span style="color:#bb60d5">RemoteWakeup</span> <span style="color:#666">=</span> <span style="color:#40a070">1</span>
-Returning <span style="color:#40a070">0</span></code></pre></div>
-<h3 id="3-using-cmake">3. Using Cmake</h3>
-
+Returning <span style="color:#40a070">0</span>
+</code></pre></div><h3 id="3-using-cmake">3. Using Cmake</h3>
 <p>Navigate to the examples folder as before containing <code>get-version.c</code><br>
 Create a directory called <code>build</code></p>
-
 <p>create a text file called <code>CMakeLists.txt</code></p>
-
 <p>Inside add the following</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">cmake_minimum_required(VERSION 3.17.2)
 
@@ -309,19 +295,19 @@ link_directories ( ~/work/CERN/FTDI/example/build /usr/local/lib)
 include_directories ( /usr/local/include )
 
 add_executable( FT4222H_Version get-version.c ) 
-target_link_libraries( FT4222H_Version ${PROJECT_LINK_LIBS} )</code></pre></div>
-<p>This tells the compiler where to find our files and links them to the project.<br>
+target_link_libraries( FT4222H_Version ${PROJECT_LINK_LIBS} )
+</code></pre></div><p>This tells the compiler where to find our files and links them to the project.<br>
 Inside link directories replace the first directory with the location of your build folder.
 Navigate to the build folder and run</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cmake ..
-make</code></pre></div>
-<p>The file <code>FT4222H_Version</code> should now be built.</p>
-
+make
+</code></pre></div><p>The file <code>FT4222H_Version</code> should now be built.</p>
 <p>execute with</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./FT4222H_Version</code></pre></div>
-<p>Again, the following should be returned</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Device <span style="color:#40a070">0</span>: <span style="color:#4070a0">&#39;FT4222 A&#39;</span>
-  Chip version: <span style="color:#40a070">42220400</span>, LibFT4222 version: <span style="color:#40a070">01040409</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./FT4222H_Version
+</code></pre></div><p>Again, the following should be returned</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Device 0: <span style="color:#4070a0">&#39;FT4222 A&#39;</span>
+  Chip version: 42220400, LibFT4222 version: <span style="color:#40a070">01040409</span>
+</code></pre></div>
 
 
 
