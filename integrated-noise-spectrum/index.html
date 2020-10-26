@@ -294,8 +294,9 @@ The datasheet for each give a noise denity of 3nV/√Hz for the OPA 227 and 4nV/
       var currentId = "codeblock" + (ii + 1);
       $(this).attr('id', currentId);
 
+    feather.replace()
       var clipButton = '<button class="btn copybtn" data-clipboard-target="#' +
-        currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="30" alt="Copy to clipboard"></button>';
+        currentId + '"><i data-feather="copy" width="20"></i></button>';
       $(this).after(clipButton);
     });
 
@@ -314,6 +315,9 @@ The datasheet for each give a noise denity of 3nV/√Hz for the OPA 227 and 4nV/
     
     addCopyButtonToCode();
   });
+
+
+
 </script>   
   </body>
 </html>
