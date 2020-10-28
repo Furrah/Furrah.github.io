@@ -269,8 +269,8 @@ if (!doNotTrack) {
 <li>move <code>libft4222.h</code> to /usr/local/include</li>
 <li>Create symbolic links for <code>libft4222.1.4.4.14.dylib</code> and <code>libftd2xx.1.4.16.dylib</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo -ln -sf /usr/local/lib/libft4222.1.4.4.14.dylib /usr/local/lib/libft4222.dylib
-sudo -ln -sf /usr/local/lib/libftd2xx.1.4.16.dylib /usr/local/lib/libftd2xx.dylib
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ln -s /usr/local/lib/libft4222.1.4.4.14.dylib /usr/local/lib/libft4222.dylib
+sudo ln -s /usr/local/lib/libftd2xx.1.4.16.dylib /usr/local/lib/libftd2xx.dylib
 </code></pre></div><h4 id="notes-on-installing">Notes on installing</h4>
 <p>If using a device with standard FTDI vendor and product identifiers, install D2xxHelper to prevent mac OS from claiming the device as a serial port (locking out D2XX programs). This will prevent the device being used with the VCP driver as a standard COM port. D2xxHelper can be found here : <a href=https://www.ftdichip.com/Drivers/D2XX/MacOSX/D2xxHelper_v2.0.0.pkg target="_blank">D2xxHelper</a></p>
 <h2 id="testing">Testing</h2>
