@@ -6,10 +6,23 @@
     <description>Recent content on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 12:04:32 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 16 Jan 2021 16:14:20 +0100</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Film development</title>
+      <link>https://furrah.github.io/film_development/</link>
+      <pubDate>Sat, 16 Jan 2021 16:14:20 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/film_development/</guid>
+      <description>Film Development A little tutorial for sam :p
+For developing Ilford HP5 with D-76 developer the Massive dev chart must be consulted!
+select the film and developer from the drop down menus.
+I like to use 1:1 dilution ratio so for one roll of 35mm HP5 film at ISO 400 the development time is 13 minutes.
+mix 150ml of water with 150ml of D76 solution and ensure the temperature is 20 degrees ± 0.</description>
+    </item>
     
     <item>
       <title>Kalman Filter RLC</title>
