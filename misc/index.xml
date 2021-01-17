@@ -6,10 +6,20 @@
     <description>Recent content on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Jan 2021 16:14:20 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 17 Jan 2021 16:49:22 +0100</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python script for CMake Framework</title>
+      <link>https://furrah.github.io/cmake_framework/</link>
+      <pubDate>Sun, 17 Jan 2021 16:49:22 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/cmake_framework/</guid>
+      <description>Outline  Generate file structure for program architecture. Generate generic CMakeLists.txt file for program compilation. Generate shell files to run CMake and execute program.  File Structure The file structure should be
+Project_name |--src |--|--CMakeLists.txt |--build |--|--build.sh |--run |--|--run.sh Python Script #!/usr/local/bin/python3 import os, sys, subprocess import argparse parser = argparse.ArgumentParser() parser.add_argument(&amp;#39;-p&amp;#39;, action=&amp;#39;store&amp;#39;, dest=&amp;#39;project_name&amp;#39;, help=&amp;#39;Name of project&amp;#39;) results = parser.parse_args() if not os.path.exists(&amp;#34;./build&amp;#34;): os.makedirs(&amp;#34;build&amp;#34;) if not os.path.exists(&amp;#34;./run&amp;#34;): os.makedirs(&amp;#34;run&amp;#34;) if not os.</description>
+    </item>
     
     <item>
       <title>Film development</title>
