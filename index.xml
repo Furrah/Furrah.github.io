@@ -6,10 +6,19 @@
     <description>Recent content on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jan 2021 16:49:22 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 21:26:43 +0100</lastBuildDate>
     
 	<atom:link href="https://furrah.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>African Peanut Stew</title>
+      <link>https://furrah.github.io/african-peanut-stew/</link>
+      <pubDate>Tue, 19 Jan 2021 21:26:43 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/african-peanut-stew/</guid>
+      <description>Stew Ingredients  1-2 tbsp peanut oil 500g sweet potato - peeled and diced 1 x 400g tin of black-eyed peas, drained and rinsed / or black beans 1 x green chilli 3 tbsp tomato puree 1 x 400g tin of chopped tomatoes 500ml vegetable stock 125g smooth peanut butter 200g spinach 1 tbsp lemon juice Handful of corriander 2 spring onions  Paste Ingredients  2 onions - roughly chopped 5 garlic cloves - roughly chopped 2 inch piece of ginger - roughly chopped 1 tsp paprika 2 tsp ground coriander 1 tsp ground turmeric 2 tsp cumin 1 tsp ground fenugreek 1 green chilli  Method  Blitz paste ingredients Add oil to pan and saute paste for 10 mins on a low/medium heat Add sweet potato, black eyed pas/beans, 1/2 green chilli, and tomato puree.</description>
+    </item>
     
     <item>
       <title>Python script for CMake Framework</title>
