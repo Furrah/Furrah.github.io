@@ -6,10 +6,21 @@
     <description>Recent content in Electronics on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 May 2020 21:45:48 +0200</lastBuildDate>
-    
-	<atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 03 Dec 2021 10:54:15 +0000</lastBuildDate><atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FTDI4222 Project Setup for Windows</title>
+      <link>https://furrah.github.io/ftdi4222_setup_windows/</link>
+      <pubDate>Fri, 03 Dec 2021 10:54:15 +0000</pubDate>
+      
+      <guid>https://furrah.github.io/ftdi4222_setup_windows/</guid>
+      <description>Setup Software required
+ MinGW compiler - gcc.exe - Version 6.3.0-1 MinGW make system - mingw32-make CMake - Version 3.22  Download the relevent drivers for the IC
+D2XX Drivers: FTD2XX
+FT4222H Driver: FT4222H
+This link may not work if the driver has been updated. If this is the case then the link can be found at FTDI4222 Windows Library
+Install the D2xx driver from the downloaded installer.
+FTDI4222 Library Folder</description>
+    </item>
     
     <item>
       <title>CMake Setup</title>

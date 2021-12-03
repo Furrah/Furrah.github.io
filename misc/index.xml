@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Well lets take a look at it, Mr Gumby!</title>
+    <title>Miscellaneous on Well lets take a look at it, Mr Gumby!</title>
     <link>https://furrah.github.io/misc/</link>
-    <description>Recent content on Well lets take a look at it, Mr Gumby!</description>
+    <description>Recent content in Miscellaneous on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Sep 2021 11:41:52 +0100</lastBuildDate>
-    
-	<atom:link href="https://furrah.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 01 Sep 2021 11:41:52 +0100</lastBuildDate><atom:link href="https://furrah.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Butternut Squash are pretty groovy</title>
       <link>https://furrah.github.io/squash/</link>
       <pubDate>Wed, 01 Sep 2021 11:41:52 +0100</pubDate>
       
       <guid>https://furrah.github.io/squash/</guid>
-      <description>Just before I left Lincolnshire for another new chapter of life I took a few photos of the butternut squash plants my dad and I had planted out earlier in the season. Lesson number one would be to grow these plants up trellis&amp;rsquo; as they spread out everywhere and climb up anything they can. Whilst we have 3 or 4 very developed fruits on the plant I was drawn to the little baby growing up towards the fence.</description>
+      <description>Just before I left Lincolnshire for another new chapter of life I took a few photos of the butternut squash plants my dad and I had planted out earlier in the season. Lesson number one would be to grow these plants up trellis&#39; as they spread out everywhere and climb up anything they can. Whilst we have 3 or 4 very developed fruits on the plant I was drawn to the little baby growing up towards the fence.</description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@ mix 150ml of water with 150ml of D76 solution and ensure the temperature is 20 d
       <description>code.has-jax { -webkit-font-smoothing: antialiased; background: inherit !important; border: none !important; font-size: 100%; }  The RLC circuit above can be expressed by the following equation
  $$ \ddot{I}_{L} = -\frac{\dot{I}_{L}}{RC} -\frac{I_L}{LC} + \frac{I}{LC} $$ The equation can be expressed as two first order differential equations using the following method.
 $$ x_{1} = I_{L} $$
-$$ x_{2} = \dot{I}_{L} $$ so $$ \dot{x}_{2} = \ddot{I}_{L} = -\frac{\dot{I}_{L}}{RC} -\frac{I_{L}}{LC} + \frac{I}{LC} $$ and $$\dot{x}_{1} =\dot{I}_{L} = x_{2}$$ Replacing variables with state variables $\bf{X}$ $$\dot{x}_{2} = - \frac{x_{2}}{RC} - \frac{x_{1}}{LC} + \frac{I}{LC}$$ Using the formula below the derivative can be discretised.</description>
+$$ x_{2} = \dot{I}{L} $$ so $$ \dot{x}{2} = \ddot{I}{L} = -\frac{\dot{I}{L}}{RC} -\frac{I_{L}}{LC} + \frac{I}{LC} $$ and $$\dot{x}{1} =\dot{I}{L} = x_{2}$$ Replacing variables with state variables $\bf{X}$ $$\dot{x}{2} = - \frac{x{2}}{RC} - \frac{x_{1}}{LC} + \frac{I}{LC}$$ Using the formula below the derivative can be discretised.</description>
     </item>
     
   </channel>

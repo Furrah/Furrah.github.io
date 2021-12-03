@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.89.4" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -11,7 +11,7 @@
   <title>Kalman Filter RLC</title>
   <style>
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -135,6 +135,9 @@ div.highlight {
     position: relative;
 }
 
+.col{
+  padding-left: 0px;
+}
 
 
 
@@ -191,11 +194,11 @@ if (!doNotTrack) {
 }
 </script>
 
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 </head>  
   <body>
+    
         <div id="nav-border" class="container">
   <nav id="nav" class="nav justify-content-center">
    
@@ -218,6 +221,10 @@ if (!doNotTrack) {
     
     
     <a class="nav-link" href="/misc/"><i data-feather="coffee"></i> Misc</a>
+   
+    
+    
+    <a class="nav-link" href="/eukarya/"><i data-feather="sun"></i> Eukarya</a>
    
     
     
@@ -258,13 +265,13 @@ if (!doNotTrack) {
 $$ \ddot{I}_{L} = -\frac{\dot{I}_{L}}{RC}  -\frac{I_L}{LC} + \frac{I}{LC} $$
 <p>The equation can be expressed as two first order differential equations using the following method.</p>
 <p>$$ x_{1} = I_{L} $$</p>
-<p>$$ x_{2} = \dot{I}_{L} $$
+<p>$$ x_{2} = \dot{I}<em>{L} $$
 so
-$$ \dot{x}_{2} = \ddot{I}_{L} = -\frac{\dot{I}_{L}}{RC} -\frac{I_{L}}{LC} + \frac{I}{LC} $$
+$$ \dot{x}</em>{2} = \ddot{I}<em>{L} = -\frac{\dot{I}</em>{L}}{RC} -\frac{I_{L}}{LC} + \frac{I}{LC} $$
 and
-$$\dot{x}_{1} =\dot{I}_{L} =  x_{2}$$
+$$\dot{x}<em>{1} =\dot{I}</em>{L} =  x_{2}$$
 Replacing variables with state variables $\bf{X}$
-$$\dot{x}_{2} = - \frac{x_{2}}{RC} - \frac{x_{1}}{LC} + \frac{I}{LC}$$
+$$\dot{x}<em>{2} = - \frac{x</em>{2}}{RC} - \frac{x_{1}}{LC} + \frac{I}{LC}$$
 Using the formula below the derivative can be discretised.<br>
 $$  \dot{x} = \frac{x_{k+1}  - x_k   }{\Delta t} $$</p>
 <p>$$ \frac{x_{1_{k+1}} - x_{1_{k}}}   {\Delta t} = x_{2_{k}}$$</p>
@@ -382,7 +389,7 @@ $$
 <p>The implementation is made in a jupyter notebook which can be downloaded here.
 For ease of viewing I have pasted the code segments here - <a href="/docs/kalman_RLC.ipynb">Kalman RLC Notebook</a></p>
 <h4 id="requirements">Requirements</h4>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">%</span>matplotlib qt
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">%</span>matplotlib qt
 <span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">numpy</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">np</span>
 <span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">matplotlib.pyplot</span> <span style="color:#007020;font-weight:bold">as</span> <span style="color:#0e84b5;font-weight:bold">plt</span>
 <span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">numpy.linalg</span> <span style="color:#007020;font-weight:bold">import</span> inv
@@ -393,7 +400,7 @@ $$
 \hat{X}_k = F_k X_{k-1} + B_{k} U_{k}
 $$
 </div>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">prediction</span>(Il,Ildot,I,t):
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">prediction</span>(Il,Ildot,I,t):
     
     L <span style="color:#666">=</span> <span style="color:#40a070">5</span>
     C <span style="color:#666">=</span> <span style="color:#40a070">500e-9</span>
@@ -415,7 +422,7 @@ $$
     
     <span style="color:#007020;font-weight:bold">return</span> X_prediction
 
-</code></pre></div><div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#60a0b0;font-style:italic">#time </span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#60a0b0;font-style:italic">#time </span>
 T <span style="color:#666">=</span> <span style="color:#40a070">0.14</span>
 t <span style="color:#666">=</span> np<span style="color:#666">.</span>linspace(<span style="color:#40a070">0</span>,T,<span style="color:#40a070">100e3</span><span style="color:#666">*</span>T)
 
@@ -448,7 +455,7 @@ Ildot_true <span style="color:#666">=</span> I[<span style="color:#40a070">1</sp
 V_true <span style="color:#666">=</span> L<span style="color:#666">*</span>Ildot_true
 noise <span style="color:#666">=</span> np<span style="color:#666">.</span>random<span style="color:#666">.</span>normal(loc<span style="color:#666">=</span><span style="color:#40a070">0</span>, scale<span style="color:#666">=</span><span style="color:#40a070">0.5</span>, size<span style="color:#666">=</span><span style="color:#007020">len</span>(t))
 V_meas <span style="color:#666">=</span> V_true <span style="color:#666">+</span> noise
-</code></pre></div><div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#60a0b0;font-style:italic">#state transition model </span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#60a0b0;font-style:italic">#state transition model </span>
 A <span style="color:#666">=</span> np<span style="color:#666">.</span>array([[<span style="color:#40a070">1</span>, dt],
               [<span style="color:#666">-</span>dt<span style="color:#666">/</span>(L<span style="color:#666">*</span>C), (<span style="color:#40a070">1</span> <span style="color:#666">-</span> (dt<span style="color:#666">/</span>(R<span style="color:#666">*</span>C)))]],dtype<span style="color:#666">=</span><span style="color:#4070a0">&#39;float&#39;</span>)
 

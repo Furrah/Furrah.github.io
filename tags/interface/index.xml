@@ -6,11 +6,7 @@
     <description>Recent content in interface on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2019 20:04:40 +0100</lastBuildDate>
-    
-	<atom:link href="https://furrah.github.io/tags/interface/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 27 Oct 2019 20:04:40 +0100</lastBuildDate><atom:link href="https://furrah.github.io/tags/interface/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FPGA I2C Wishbone Interface and Testing </title>
       <link>https://furrah.github.io/i2c-wishbone-interface-fpga/</link>

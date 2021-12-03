@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.89.4" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -11,7 +11,7 @@
   <title>FPGA I2C Wishbone Interface and Testing </title>
   <style>
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -135,6 +135,9 @@ div.highlight {
     position: relative;
 }
 
+.col{
+  padding-left: 0px;
+}
 
 
 
@@ -191,11 +194,11 @@ if (!doNotTrack) {
 }
 </script>
 
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 </head>  
   <body>
+    
         <div id="nav-border" class="container">
   <nav id="nav" class="nav justify-content-center">
    
@@ -218,6 +221,10 @@ if (!doNotTrack) {
     
     
     <a class="nav-link" href="/misc/"><i data-feather="coffee"></i> Misc</a>
+   
+    
+    
+    <a class="nav-link" href="/eukarya/"><i data-feather="sun"></i> Eukarya</a>
    
     
     
@@ -284,7 +291,7 @@ if (!doNotTrack) {
 <li>one to be read only by the I2C master</li>
 </ul>
 <p>Save as I2C_Slave.wb</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog">
 peripheral {
 	name <span style="color:#666">=</span><span style="color:#4070a0">&#34;I2C_Slave&#34;</span>; 
 	prefix<span style="color:#666">=</span><span style="color:#4070a0">&#34;i2cslave&#34;</span>; 
@@ -324,9 +331,9 @@ peripheral {
 	};
 };
 </code></pre></div><h4 id="generate-i2c_slavevhd-file-using-wbgen2">Generate I2C_Slave.vhd file using wbgen2</h4>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lua wbgen2 -V I2C_Slave.vhd -D I2C_Slave.html I2C_Slave.wb
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lua wbgen2 -V I2C_Slave.vhd -D I2C_Slave.html I2C_Slave.wb
 </code></pre></div><p>This can be made easier using a .bat file. example below. @pause stops the application exiting - useful for compiler errors.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">lua C:\Users\jospence\Downloads\wishbone-gen\wbgen2 -V I2C_Slave.vhd -D I2C_Slave.html I2C_Slave.wb
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">lua C:\Users\jospence\Downloads\wishbone-gen\wbgen2 -V I2C_Slave.vhd -D I2C_Slave.html I2C_Slave.wb
 @<span style="color:#007020;font-weight:bold">pause</span>
 </code></pre></div><h4 id="add-i2c_slavevhd-to-project">Add I2C_Slave.vhd to project</h4>
 <p>doesn&rsquo;t matter if you are using VHDL or Verilog.</p>
@@ -334,7 +341,7 @@ peripheral {
 <p>(<a href="https://ohwr.org/project/general-cores">https://ohwr.org/project/general-cores</a>)
 NOTE there will be many more files required - all of which are found in general cores and will be flagged by the compiler</p>
 <h4 id="connect-ports-to-the-wb_i2c_bridge">Connect ports to the wb_i2c_bridge</h4>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#007020;font-weight:bold">wire</span>        wb_stb;
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#007020;font-weight:bold">wire</span>        wb_stb;
 <span style="color:#007020;font-weight:bold">wire</span>        wb_cyc;
 <span style="color:#007020;font-weight:bold">wire</span>  [<span style="color:#40a070">3</span><span style="color:#666">:</span><span style="color:#40a070">0</span>] wb_sel_b4;
 <span style="color:#007020;font-weight:bold">wire</span>        wb_we;
@@ -350,7 +357,7 @@ NOTE there will be many more files required - all of which are found in general 
 
 <span style="color:#007020;font-weight:bold">assign</span> Scl_io <span style="color:#666">=</span> (Scl_en_o) <span style="color:#666">?</span> Scl_o <span style="color:#666">:</span> <span style="color:#40a070">1</span>&#39;bZ; <span style="color:#60a0b0;font-style:italic">// when I2C not enabled make pins high impedance 
 </span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">assign</span> Sda_io <span style="color:#666">=</span> (Sda_en_o) <span style="color:#666">?</span> Sda_o <span style="color:#666">:</span> <span style="color:#40a070">1</span>&#39;bZ; <span style="color:#60a0b0;font-style:italic">// when I2C not enabled make pins high impedance 
-</span></code></pre></div><div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#60a0b0;font-style:italic">// # is how parameters are passe din verilog - .g_fsm_wdt(480000) this is the watchdog time out. 
+</span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#60a0b0;font-style:italic">// # is how parameters are passe din verilog - .g_fsm_wdt(480000) this is the watchdog time out. 
 </span><span style="color:#60a0b0;font-style:italic"></span>wb_i2c_bridge #(.g_fsm_wdt(<span style="color:#40a070">480000</span>)) i_wb_i2c_bridge (
     .clk_i      (Clk_ik), <span style="color:#60a0b0;font-style:italic">// system clock - external crystal  
 </span><span style="color:#60a0b0;font-style:italic"></span>    .rst_n_i    (<span style="color:#666">!</span>Reset_r), <span style="color:#60a0b0;font-style:italic">// system reset 
@@ -380,7 +387,7 @@ NOTE there will be many more files required - all of which are found in general 
     .wbm_err_i  (wb_err)
 );
 </code></pre></div><h4 id="connect-ports-to-i2c_slave">Connect ports to I2C_Slave</h4>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog">I2C_Slave i_I2C_Slave (
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog">I2C_Slave i_I2C_Slave (
     .rst_n_i    (<span style="color:#666">!</span>Reset_r),
     .clk_sys_i  (Clk_ik),
     .wb_adr_i   (wb_adr_b32),
@@ -399,12 +406,12 @@ NOTE there will be many more files required - all of which are found in general 
 </span><span style="color:#60a0b0;font-style:italic"></span>);
 </code></pre></div><h1 id="testing">Testing</h1>
 <p>To communicate with the FPGA we will be using the MCP2221A chip which conveniently has a python library built for it and can be installed with pip.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install PyMCP2221A
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install PyMCP2221A
 </code></pre></div><p><strong>one of the  nuances with the wishbone interface is that the registers require 16-bit addresses, opposed to other chips requiring 8-bit register addresses.</strong></p>
 <p>Python script.
 First lets initialise our device and create a couple of functions for reading and writing to our I2C slave. The pyMCP22221A library recommends creating the object, resetting and then creating it again. I don&rsquo;t know why.</p>
 <p>Second, remember that the address of our FPGA is at 0x40 which can be found in wb_i2c_bridge.v</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">Read_I2C</span>(device,addr,register,num_bytes):
 	device<span style="color:#666">.</span>I2C_Write_No_Stop(addr, [<span style="color:#40a070">0x00</span>, register])
 	read <span style="color:#666">=</span> <span style="color:#007020">list</span>(device<span style="color:#666">.</span>I2C_Read_Repeated(addr, num_bytes))
@@ -422,7 +429,7 @@ mcp2221<span style="color:#666">.</span>I2C_Init()
 
 
 Write_FPGA(device <span style="color:#666">=</span> mcp2221, addr <span style="color:#666">=</span> <span style="color:#40a070">0x40</span>, register <span style="color:#666">=</span> <span style="color:#40a070">0x00</span>, data <span style="color:#666">=</span> [<span style="color:#40a070">0xFF</span>, <span style="color:#40a070">0xFF</span>, <span style="color:#40a070">0xFF</span>, <span style="color:#40a070">0xFF</span>])
-<span style="color:#007020;font-weight:bold">print</span>(Read_I2C(device <span style="color:#666">=</span> mcp2221, addr <span style="color:#666">=</span> <span style="color:#40a070">0x40</span>, register <span style="color:#666">=</span> <span style="color:#40a070">0x00</span>, <span style="color:#40a070">4</span>))
+<span style="color:#007020">print</span>(Read_I2C(device <span style="color:#666">=</span> mcp2221, addr <span style="color:#666">=</span> <span style="color:#40a070">0x40</span>, register <span style="color:#666">=</span> <span style="color:#40a070">0x00</span>, <span style="color:#40a070">4</span>))
 </code></pre></div><p>The result of this should be - [0xFF, 0xFF, 0xFF, 0xFF]</p>
 
 

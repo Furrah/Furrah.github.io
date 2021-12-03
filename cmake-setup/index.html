@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.89.4" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -11,7 +11,7 @@
   <title>CMake Setup</title>
   <style>
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -135,6 +135,9 @@ div.highlight {
     position: relative;
 }
 
+.col{
+  padding-left: 0px;
+}
 
 
 
@@ -191,11 +194,11 @@ if (!doNotTrack) {
 }
 </script>
 
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 </head>  
   <body>
+    
         <div id="nav-border" class="container">
   <nav id="nav" class="nav justify-content-center">
    
@@ -221,6 +224,10 @@ if (!doNotTrack) {
    
     
     
+    <a class="nav-link" href="/eukarya/"><i data-feather="sun"></i> Eukarya</a>
+   
+    
+    
     <a class="nav-link" href="/tags/"><i data-feather="tag"></i> Tags</a>
   
 
@@ -241,10 +248,10 @@ if (!doNotTrack) {
 <br><br>
 <h2 id="installing-cmake-on-macos-and-adding-to-path">Installing CMake on macOS and adding to path</h2>
 <p>Cmake can be installed using</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install cmake
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install cmake
 </code></pre></div><p>if you have the homebrew package manager installed. If not, go to <a href=https://cmake.org/download/ target="_blank">CMake</a> and download the latest version.</p>
 <p>once installed add to path using the command</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /Applications/CMake.app/Contents/bin/cmake-gui --install<span style="color:#666">=</span>/usr/local/bin
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo /Applications/CMake.app/Contents/bin/cmake-gui --install<span style="color:#666">=</span>/usr/local/bin
 </code></pre></div><p>Done!</p>
 
 

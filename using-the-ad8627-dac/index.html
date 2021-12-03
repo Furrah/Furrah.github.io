@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.89.4" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -11,7 +11,7 @@
   <title>Using the AD5627 DAC</title>
   <style>
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -135,6 +135,9 @@ div.highlight {
     position: relative;
 }
 
+.col{
+  padding-left: 0px;
+}
 
 
 
@@ -191,11 +194,11 @@ if (!doNotTrack) {
 }
 </script>
 
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 </head>  
   <body>
+    
         <div id="nav-border" class="container">
   <nav id="nav" class="nav justify-content-center">
    
@@ -218,6 +221,10 @@ if (!doNotTrack) {
     
     
     <a class="nav-link" href="/misc/"><i data-feather="coffee"></i> Misc</a>
+   
+    
+    
+    <a class="nav-link" href="/eukarya/"><i data-feather="sun"></i> Eukarya</a>
    
     
     
@@ -273,25 +280,25 @@ The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C inte
 <thead>
 <tr>
 <th>ADDR Pin Connection</th>
-<th align="center">A1</th>
-<th align="center">A0</th>
+<th style="text-align:center">A1</th>
+<th style="text-align:center">A0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>VDD</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td>No Connection</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
 <td>GND</td>
-<td align="center">1</td>
-<td align="center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>

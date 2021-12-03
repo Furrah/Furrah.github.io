@@ -6,11 +6,7 @@
     <description>Recent content in basics on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Oct 2019 22:24:10 +0100</lastBuildDate>
-    
-	<atom:link href="https://furrah.github.io/tags/basics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 30 Oct 2019 22:24:10 +0100</lastBuildDate><atom:link href="https://furrah.github.io/tags/basics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Precision Op Amp Gain Adjustment with DACs</title>
       <link>https://furrah.github.io/op-amp-gain-adjustment-dac/</link>

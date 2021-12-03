@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.89.4" />
   
   <link rel="stylesheet" href="https://furrah.github.io/css/bootstrap.min.css">
   
@@ -11,7 +11,7 @@
   <title>Python script for CMake Framework</title>
   <style>
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -135,6 +135,9 @@ div.highlight {
     position: relative;
 }
 
+.col{
+  padding-left: 0px;
+}
 
 
 
@@ -191,11 +194,11 @@ if (!doNotTrack) {
 }
 </script>
 
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 </head>  
   <body>
+    
         <div id="nav-border" class="container">
   <nav id="nav" class="nav justify-content-center">
    
@@ -218,6 +221,10 @@ if (!doNotTrack) {
     
     
     <a class="nav-link" href="/misc/"><i data-feather="coffee"></i> Misc</a>
+   
+    
+    
+    <a class="nav-link" href="/eukarya/"><i data-feather="sun"></i> Eukarya</a>
    
     
     
@@ -247,7 +254,7 @@ if (!doNotTrack) {
 </ul>
 <h2 id="file-structure">File Structure</h2>
 <p>The file structure should be</p>
-<pre><code>Project_name
+<pre tabindex="0"><code>Project_name
 |--src
 |--|--CMakeLists.txt
 |--build
@@ -255,7 +262,7 @@ if (!doNotTrack) {
 |--run 
 |--|--run.sh
 </code></pre><h2 id="python-script">Python Script</h2>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#60a0b0;font-style:italic">#!/usr/local/bin/python3</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#60a0b0;font-style:italic">#!/usr/local/bin/python3</span>
 
 <span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">os</span><span style="color:#666">,</span> <span style="color:#0e84b5;font-weight:bold">sys</span><span style="color:#666">,</span> <span style="color:#0e84b5;font-weight:bold">subprocess</span> 
 <span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">argparse</span>
@@ -279,44 +286,44 @@ results <span style="color:#666">=</span> parser<span style="color:#666">.</span
 os<span style="color:#666">.</span>chdir(<span style="color:#4070a0">&#34;src/&#34;</span>)
 
 <span style="color:#007020;font-weight:bold">if</span> <span style="color:#007020">len</span>(sys<span style="color:#666">.</span>argv) <span style="color:#666">&lt;=</span><span style="color:#40a070">1</span>:
-	<span style="color:#007020;font-weight:bold">print</span>(<span style="color:#4070a0">&#34;Not enough arguments, use -p to add project name&#34;</span>)
+	<span style="color:#007020">print</span>(<span style="color:#4070a0">&#34;Not enough arguments, use -p to add project name&#34;</span>)
 	sys<span style="color:#666">.</span>exit()
 
 PROJECT_NAME <span style="color:#666">=</span> results<span style="color:#666">.</span>project_name
 
-<span style="color:#007020;font-weight:bold">with</span> <span style="color:#007020">open</span>(<span style="color:#4070a0">&#34;CMakeLists.txt&#34;</span>, <span style="color:#4070a0">&#39;w+&#39;</span>) <span style="color:#007020;font-weight:bold">as</span> <span style="color:#007020">file</span>:
+<span style="color:#007020;font-weight:bold">with</span> <span style="color:#007020">open</span>(<span style="color:#4070a0">&#34;CMakeLists.txt&#34;</span>, <span style="color:#4070a0">&#39;w+&#39;</span>) <span style="color:#007020;font-weight:bold">as</span> file:
 	
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;cmake_minimum_required(VERSION 3.18.4)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;project(&#34;</span> <span style="color:#666">+</span> PROJECT_NAME <span style="color:#666">+</span> <span style="color:#4070a0">&#34;)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;set(CMAKE_CXX_STANDARD 17)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;add_executable(${PROJECT_NAME} main.cpp)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;add_subdirectory()</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;target_include_directories(${PROJECT_NAME}</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">#/usr/local/include</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;target_link_directories(${PROJECT_NAME}</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">#/usr/local/lib</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;target_link_libraries(${PROJECT_NAME})</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;cmake_minimum_required(VERSION 3.18.4)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;project(&#34;</span> <span style="color:#666">+</span> PROJECT_NAME <span style="color:#666">+</span> <span style="color:#4070a0">&#34;)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;set(CMAKE_CXX_STANDARD 17)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;add_executable($</span><span style="color:#70a0d0;font-style:italic">{PROJECT_NAME}</span><span style="color:#4070a0"> main.cpp)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;add_subdirectory()</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;target_include_directories($</span><span style="color:#70a0d0;font-style:italic">{PROJECT_NAME}</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">#/usr/local/include</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;target_link_directories($</span><span style="color:#70a0d0;font-style:italic">{PROJECT_NAME}</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">#/usr/local/lib</span><span style="color:#4070a0;font-weight:bold">\n\t</span><span style="color:#4070a0">)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;target_link_libraries($</span><span style="color:#70a0d0;font-style:italic">{PROJECT_NAME}</span><span style="color:#4070a0">)</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">&#34;</span>)
 
 os<span style="color:#666">.</span>chdir(<span style="color:#4070a0">&#34;../run&#34;</span>)
 
-<span style="color:#007020;font-weight:bold">with</span> <span style="color:#007020">open</span>(<span style="color:#4070a0">&#34;run.sh&#34;</span>, <span style="color:#4070a0">&#39;w+&#39;</span>) <span style="color:#007020;font-weight:bold">as</span> <span style="color:#007020">file</span>:
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;#!/bin/sh</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">./../build/&#34;</span><span style="color:#666">+</span> PROJECT_NAME )
+<span style="color:#007020;font-weight:bold">with</span> <span style="color:#007020">open</span>(<span style="color:#4070a0">&#34;run.sh&#34;</span>, <span style="color:#4070a0">&#39;w+&#39;</span>) <span style="color:#007020;font-weight:bold">as</span> file:
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;#!/bin/sh</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">./../build/&#34;</span><span style="color:#666">+</span> PROJECT_NAME )
 
 subprocess<span style="color:#666">.</span>run([<span style="color:#4070a0">&#34;chmod&#34;</span>,<span style="color:#4070a0">&#34;+x&#34;</span>, <span style="color:#4070a0">&#34;run.sh&#34;</span>])
 
 os<span style="color:#666">.</span>chdir(<span style="color:#4070a0">&#34;../build&#34;</span>)
 
-<span style="color:#007020;font-weight:bold">with</span> <span style="color:#007020">open</span>(<span style="color:#4070a0">&#34;build.sh&#34;</span>, <span style="color:#4070a0">&#39;w+&#39;</span>) <span style="color:#007020;font-weight:bold">as</span> <span style="color:#007020">file</span>:
-	<span style="color:#007020">file</span><span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;#!/bin/sh</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">cmake -S ../src -B .&#34;</span>)
+<span style="color:#007020;font-weight:bold">with</span> <span style="color:#007020">open</span>(<span style="color:#4070a0">&#34;build.sh&#34;</span>, <span style="color:#4070a0">&#39;w+&#39;</span>) <span style="color:#007020;font-weight:bold">as</span> file:
+	file<span style="color:#666">.</span>write(<span style="color:#4070a0">&#34;#!/bin/sh</span><span style="color:#4070a0;font-weight:bold">\n\n</span><span style="color:#4070a0">cmake -S ../src -B .&#34;</span>)
 
 subprocess<span style="color:#666">.</span>run([<span style="color:#4070a0">&#34;chmod&#34;</span>,<span style="color:#4070a0">&#34;+x&#34;</span>, <span style="color:#4070a0">&#34;build.sh&#34;</span>])	
 </code></pre></div><h2 id="make-file-executable-system-wide">Make file executable system wide</h2>
 <p>Save the python script in a folder of your choice. I&rsquo;ve called mine &ldquo;cmf&rdquo; - CMakeFramework</p>
 <p>navigate to the script and make it executable with</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +x cmf
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +x cmf
 </code></pre></div><p>Then add to path by editing .bashrc/.zshrc or whatever shell you use.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007020">export</span> <span style="color:#bb60d5">PATH</span><span style="color:#666">=</span><span style="color:#bb60d5">$PATH</span>:&lt;path_to_script&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007020">export</span> <span style="color:#bb60d5">PATH</span><span style="color:#666">=</span><span style="color:#bb60d5">$PATH</span>:&lt;path_to_script&gt;
 </code></pre></div><h2 id="cmakeliststxt-file">CMakeLists.txt file</h2>
 <p>below is the contents of the CMakeLists.txt file for a project called &ldquo;Test_Project&rdquo; This can be easily edited and just provides a simple framework for getting started with a C++ project.</p>
-<pre><code>cmake_minimum_required(VERSION 3.18.4)
+<pre tabindex="0"><code>cmake_minimum_required(VERSION 3.18.4)
 
 project(Test_Project)
 
@@ -336,11 +343,11 @@ target_link_libraries(${PROJECT_NAME})
 </code></pre><h2 id="runsh--buildsh">run.sh &amp; build.sh</h2>
 <p>Generated Shell files</p>
 <h3 id="runsh">run.sh</h3>
-<pre><code>#!/bin/sh
+<pre tabindex="0"><code>#!/bin/sh
 
 ./../build/&lt;project_name&gt;
 </code></pre><h3 id="buildsh">build.sh</h3>
-<pre><code>#!/bin/sh
+<pre tabindex="0"><code>#!/bin/sh
 
 cmake -S ../src -B .
 </code></pre>
