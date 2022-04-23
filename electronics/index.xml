@@ -6,7 +6,16 @@
     <description>Recent content in Electronics on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Dec 2021 10:54:15 +0000</lastBuildDate><atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Apr 2022 21:07:32 +0100</lastBuildDate><atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DS18B20_temp_sensor_pcb</title>
+      <link>https://furrah.github.io/ds18b20_temp_sensor_pcb/</link>
+      <pubDate>Sat, 23 Apr 2022 21:07:32 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/ds18b20_temp_sensor_pcb/</guid>
+      <description>Introduction In 2013 I discovered the DS18B20 digital thermometer IC made by Maxim Integrated. It&amp;rsquo;s a great little IC that has provides a 12 bit temperature measurement and interfaces over the 1-Wire bus allowing multiple sensors to be daisy chained! Back then I used veraboard and some terrible soldering to create the strings of sensors used in my greenhouse. Well its now 2022 and I&amp;rsquo;m back to thinking about greenhouses.</description>
+    </item>
+    
     <item>
       <title>FTDI4222 Project Setup for Windows</title>
       <link>https://furrah.github.io/ftdi4222_setup_windows/</link>
