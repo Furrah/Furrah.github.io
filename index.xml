@@ -319,7 +319,8 @@ writeImage(&#34;/photography/images/Avoriaz/DSC_1025.jpg&#34;); Very close to th
       <description>code.has-jax { -webkit-font-smoothing: antialiased; background: inherit !important; border: none !important; font-size: 100%; }  The RLC circuit above can be expressed by the following equation
  $$ \ddot{I}_{L} = -\frac{\dot{I}_{L}}{RC} -\frac{I_L}{LC} + \frac{I}{LC} $$ The equation can be expressed as two first order differential equations using the following method.
 $$ x_{1} = I_{L} $$
-$$ x_{2} = \dot{I}{L} $$ so $$ \dot{x}{2} = \ddot{I}{L} = -\frac{\dot{I}{L}}{RC} -\frac{I_{L}}{LC} + \frac{I}{LC} $$ and $$\dot{x}{1} =\dot{I}{L} = x_{2}$$ Replacing variables with state variables $\bf{X}$ $$\dot{x}{2} = - \frac{x{2}}{RC} - \frac{x_{1}}{LC} + \frac{I}{LC}$$ Using the formula below the derivative can be discretised.</description>
+$$ x_{2} = \dot{I}_{L}$$
+ so  $$ \dot{x}_{2} = \ddot{I}_{L} = -\frac{\dot{I}_{L}}{RC} -\frac{I_{L}}{LC} + \frac{I}{LC} $$  and</description>
     </item>
     
     <item>
