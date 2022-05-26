@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://furrah.github.io/</loc>
-    <lastmod>2022-04-23T21:07:32+01:00</lastmod>
+    <lastmod>2022-05-26T20:49:35+01:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://furrah.github.io/food/</loc>
+    <lastmod>2022-05-26T20:49:35+01:00</lastmod>
+  </url><url>
+    <loc>https://furrah.github.io/tofu-with-garlic-sauce/</loc>
+    <lastmod>2022-05-26T20:49:35+01:00</lastmod>
   </url><url>
     <loc>https://furrah.github.io/ds18b20_temp_sensor_pcb/</loc>
     <lastmod>2022-04-23T21:07:32+01:00</lastmod>
@@ -16,9 +22,6 @@
     <lastmod>2021-12-03T10:54:15+00:00</lastmod>
   </url><url>
     <loc>https://furrah.github.io/sausage-casserole/</loc>
-    <lastmod>2021-10-02T16:39:16+01:00</lastmod>
-  </url><url>
-    <loc>https://furrah.github.io/food/</loc>
     <lastmod>2021-10-02T16:39:16+01:00</lastmod>
   </url><url>
     <loc>https://furrah.github.io/eukarya/</loc>
