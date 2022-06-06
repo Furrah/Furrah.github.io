@@ -6,7 +6,16 @@
     <description>Recent content in Electronics on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Apr 2022 21:07:32 +0100</lastBuildDate><atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Apr 2022 22:02:52 +0100</lastBuildDate><atom:link href="https://furrah.github.io/electronics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Greenhouse</title>
+      <link>https://furrah.github.io/greenhouse/</link>
+      <pubDate>Sun, 24 Apr 2022 22:02:52 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/greenhouse/</guid>
+      <description>Introduction Back in 2013 I&amp;rsquo;d have just completed my 3rd year at university and was pretty interested in grow cells for vertical farming and wanted to build an automated greenhouse for myself. After my degree I even had a PHD setup on this topic! Alas i decided to venture into the big bad world. Anyway, I was hyped to built my own automated greenhouse! I dug a trench from the house to the greenhouse and laid armoured cable.</description>
+    </item>
+    
     <item>
       <title>DS18B20 Temperature Sensor PCB</title>
       <link>https://furrah.github.io/ds18b20_temp_sensor_pcb/</link>
