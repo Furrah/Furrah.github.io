@@ -32,18 +32,6 @@ FTDI4222 Library Folder</description>
     </item>
     
     <item>
-      <title>CMake Setup</title>
-      <link>https://furrah.github.io/cmake-setup/</link>
-      <pubDate>Sat, 23 May 2020 21:45:48 +0200</pubDate>
-      
-      <guid>https://furrah.github.io/cmake-setup/</guid>
-      <description>Installing CMake on macOS and adding to path Cmake can be installed using
-brew install cmake if you have the homebrew package manager installed. If not, go to CMake and download the latest version.
-once installed add to path using the command
-sudo /Applications/CMake.app/Contents/bin/cmake-gui --install=/usr/local/bin Done!</description>
-    </item>
-    
-    <item>
       <title>Interfacing with FTDIs FT4222H USB 2.0 to Quad SPI / I2C Bridge IC</title>
       <link>https://furrah.github.io/ftdi-4222-setup/</link>
       <pubDate>Sat, 23 May 2020 17:20:32 +0200</pubDate>
