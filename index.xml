@@ -6,7 +6,17 @@
     <description>Recent content on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jun 2022 22:09:55 +0100</lastBuildDate><atom:link href="https://furrah.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jun 2022 15:49:20 +0100</lastBuildDate><atom:link href="https://furrah.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Heating</title>
+      <link>https://furrah.github.io/greenhouse/heating/</link>
+      <pubDate>Tue, 07 Jun 2022 15:49:20 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/greenhouse/heating/</guid>
+      <description>Can I heat the greenhouse? My first idea was to see if it is possible to maintain a 5 degree C temperature gradient between the inside and outside of the greenhouse. I wondered how much power I would need to do this. Below is a calculation to do just that but getting the constants right is pretty tricky and ambiguous at best.
+The calculation is based upon this tutorial and these websites give a good idea of what the constants for the windows might be.</description>
+    </item>
+    
     <item>
       <title>Build</title>
       <link>https://furrah.github.io/greenhouse/build/</link>
