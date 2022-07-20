@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://furrah.github.io/</loc>
-    <lastmod>2022-06-07T15:49:20+01:00</lastmod>
+    <lastmod>2022-07-18T14:29:23+01:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://furrah.github.io/misc/</loc>
+    <lastmod>2022-07-18T14:29:23+01:00</lastmod>
+  </url><url>
+    <loc>https://furrah.github.io/ntc/</loc>
+    <lastmod>2022-07-18T14:29:23+01:00</lastmod>
   </url><url>
     <loc>https://furrah.github.io/greenhouse/</loc>
     <lastmod>2022-06-07T15:49:20+01:00</lastmod>
@@ -37,9 +43,6 @@
     <lastmod>2021-10-02T16:39:16+01:00</lastmod>
   </url><url>
     <loc>https://furrah.github.io/fungi/</loc>
-    <lastmod>2021-09-29T08:29:45+01:00</lastmod>
-  </url><url>
-    <loc>https://furrah.github.io/misc/</loc>
     <lastmod>2021-09-29T08:29:45+01:00</lastmod>
   </url><url>
     <loc>https://furrah.github.io/growing_avocado/</loc>
