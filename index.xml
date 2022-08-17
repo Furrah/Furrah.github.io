@@ -6,7 +6,17 @@
     <description>Recent content on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jul 2022 14:29:23 +0100</lastBuildDate><atom:link href="https://furrah.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2022 09:05:09 +0100</lastBuildDate><atom:link href="https://furrah.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PT RTD Calculator</title>
+      <link>https://furrah.github.io/pt1000/</link>
+      <pubDate>Thu, 21 Jul 2022 09:05:09 +0100</pubDate>
+      
+      <guid>https://furrah.github.io/pt1000/</guid>
+      <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   Tmin: Tmax: R0: Vcc: R1: R2: R3: R4:        
+ // Need to be careful using this function, the last number is the stop value. function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i params.</description>
+    </item>
+    
     <item>
       <title>NTC Calculator</title>
       <link>https://furrah.github.io/ntc/</link>
@@ -14,7 +24,7 @@
       
       <guid>https://furrah.github.io/ntc/</guid>
       <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   B: R2: R25: Vcc:        
- function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i Equations  Characterise the NTC thermistor using the Beta method. $$r_{\infty} = R25 * exp \left(\frac{-B}{T25}\right)$$</description>
+ function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i Equations  Characterise the NTC thermistor using the Beta method. $$r_{\infty} = R_{25} \cdot exp \left(\frac{-B}{T_{25}}\right)$$</description>
     </item>
     
     <item>
