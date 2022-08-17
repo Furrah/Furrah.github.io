@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Miscellaneous on Well lets take a look at it, Mr Gumby!</title>
-    <link>https://furrah.github.io/misc/</link>
+    <link>https://mybrainhertz.co.uk/misc/</link>
     <description>Recent content in Miscellaneous on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jul 2022 09:05:09 +0100</lastBuildDate><atom:link href="https://furrah.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2022 09:05:09 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PT RTD Calculator</title>
-      <link>https://furrah.github.io/pt1000/</link>
+      <link>https://mybrainhertz.co.uk/pt1000/</link>
       <pubDate>Thu, 21 Jul 2022 09:05:09 +0100</pubDate>
       
-      <guid>https://furrah.github.io/pt1000/</guid>
+      <guid>https://mybrainhertz.co.uk/pt1000/</guid>
       <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   Tmin: Tmax: R0: Vcc: R1: R2: R3: R4:        
  // Need to be careful using this function, the last number is the stop value. function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i params.</description>
     </item>
     
     <item>
       <title>NTC Calculator</title>
-      <link>https://furrah.github.io/ntc/</link>
+      <link>https://mybrainhertz.co.uk/ntc/</link>
       <pubDate>Mon, 18 Jul 2022 14:29:23 +0100</pubDate>
       
-      <guid>https://furrah.github.io/ntc/</guid>
+      <guid>https://mybrainhertz.co.uk/ntc/</guid>
       <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   B: R2: R25: Vcc:        
  function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i Equations  Characterise the NTC thermistor using the Beta method. $$r_{\infty} = R_{25} \cdot exp \left(\frac{-B}{T_{25}}\right)$$</description>
     </item>
     
     <item>
       <title>Fungi</title>
-      <link>https://furrah.github.io/fungi/</link>
+      <link>https://mybrainhertz.co.uk/fungi/</link>
       <pubDate>Wed, 29 Sep 2021 08:29:45 +0100</pubDate>
       
-      <guid>https://furrah.github.io/fungi/</guid>
+      <guid>https://mybrainhertz.co.uk/fungi/</guid>
       <description>Introduction An attempt at identifying fungi. There&amp;rsquo;s a strong chance I am 99% wrong.
 Stinkhorn - Close to Greenham Common Nature Reserve - Berkshire Out walking with my friend Will searching for one of the last blooming orchids in the UK - Autumn Lady Tresses. We didn&amp;rsquo;t find any unfortunately but we did find these!     Chicken of the woods - Bagley Wood - Oxfordshire Apparently as the name suggests it tastes of chicken&amp;hellip; or at least is a good replacement for chicken!</description>
     </item>
     
     <item>
       <title>Growing Avocados</title>
-      <link>https://furrah.github.io/growing_avocado/</link>
+      <link>https://mybrainhertz.co.uk/growing_avocado/</link>
       <pubDate>Tue, 28 Sep 2021 17:51:45 +0100</pubDate>
       
-      <guid>https://furrah.github.io/growing_avocado/</guid>
+      <guid>https://mybrainhertz.co.uk/growing_avocado/</guid>
       <description>Introduction I&amp;rsquo;ve just got back from the Isle of Skye in Scotland and have bought back 20 Avocado seeds left over from a weeks worth of communal meals. I&amp;rsquo;ve just moved to Oxford, although I am currently staying with my friend Adam in Abingdon and have decided to propagate the seeds in his apartment. Thanks Adam.
 14th September 2021 Tooth pick up the seeds and suspend in water. There is a better method for this which is suspending the seed from the top and not tripoding like I have done.</description>
     </item>
     
     <item>
       <title>Butternut Squash are pretty groovy</title>
-      <link>https://furrah.github.io/squash/</link>
+      <link>https://mybrainhertz.co.uk/squash/</link>
       <pubDate>Wed, 01 Sep 2021 11:41:52 +0100</pubDate>
       
-      <guid>https://furrah.github.io/squash/</guid>
+      <guid>https://mybrainhertz.co.uk/squash/</guid>
       <description>Just before I left Lincolnshire for another new chapter of life I took a few photos of the butternut squash plants my dad and I had planted out earlier in the season. Lesson number one would be to grow these plants up trellis&#39; as they spread out everywhere and climb up anything they can. Whilst we have 3 or 4 very developed fruits on the plant I was drawn to the little baby growing up towards the fence.</description>
     </item>
     
     <item>
       <title>Python script for CMake Framework</title>
-      <link>https://furrah.github.io/cmake_framework/</link>
+      <link>https://mybrainhertz.co.uk/cmake_framework/</link>
       <pubDate>Sun, 17 Jan 2021 16:49:22 +0100</pubDate>
       
-      <guid>https://furrah.github.io/cmake_framework/</guid>
+      <guid>https://mybrainhertz.co.uk/cmake_framework/</guid>
       <description>Outline  Generate file structure for program architecture. Generate generic CMakeLists.txt file for program compilation. Generate shell files to run CMake and execute program.  File Structure The file structure should be
 Project_name |--src |--|--CMakeLists.txt |--build |--|--build.sh |--run |--|--run.sh Python Script #!/usr/local/bin/python3 import os, sys, subprocess import argparse parser = argparse.ArgumentParser() parser.add_argument(&amp;#39;-p&amp;#39;, action=&amp;#39;store&amp;#39;, dest=&amp;#39;project_name&amp;#39;, help=&amp;#39;Name of project&amp;#39;) results = parser.parse_args() if not os.path.exists(&amp;#34;./build&amp;#34;): os.makedirs(&amp;#34;build&amp;#34;) if not os.path.exists(&amp;#34;./run&amp;#34;): os.makedirs(&amp;#34;run&amp;#34;) if not os.</description>
     </item>
     
     <item>
       <title>Film development</title>
-      <link>https://furrah.github.io/film_development/</link>
+      <link>https://mybrainhertz.co.uk/film_development/</link>
       <pubDate>Sat, 16 Jan 2021 16:14:20 +0100</pubDate>
       
-      <guid>https://furrah.github.io/film_development/</guid>
+      <guid>https://mybrainhertz.co.uk/film_development/</guid>
       <description>Film Development A little tutorial for sam :p
 For developing Ilford HP5 with D-76 developer the Massive dev chart must be consulted!
 select the film and developer from the drop down menus.
@@ -81,10 +81,10 @@ mix 150ml of water with 150ml of D76 solution and ensure the temperature is 20 d
     
     <item>
       <title>Kalman Filter RLC</title>
-      <link>https://furrah.github.io/kalman-filter-rlc/</link>
+      <link>https://mybrainhertz.co.uk/kalman-filter-rlc/</link>
       <pubDate>Mon, 01 Jun 2020 12:04:32 +0200</pubDate>
       
-      <guid>https://furrah.github.io/kalman-filter-rlc/</guid>
+      <guid>https://mybrainhertz.co.uk/kalman-filter-rlc/</guid>
       <description>code.has-jax { -webkit-font-smoothing: antialiased; background: inherit !important; border: none !important; font-size: 100%; }  The RLC circuit above can be expressed by the following equation
  $$ \ddot{I}_{L} = -\frac{\dot{I}_{L}}{RC} -\frac{I_L}{LC} + \frac{I}{LC} $$ The equation can be expressed as two first order differential equations using the following method.
 $$ x_{1} = I_{L} $$
