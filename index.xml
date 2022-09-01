@@ -13,7 +13,7 @@
       <pubDate>Thu, 21 Jul 2022 09:05:09 +0100</pubDate>
       
       <guid>https://mybrainhertz.co.uk/pt1000/</guid>
-      <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   Tmin: Tmax: R0: Vcc: R1: R2: R3: R4:        
+      <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   Tmin: Tmax: Vcc: R0 @ 0&amp;degC: R1: R2: R3: R4: --        
  // Need to be careful using this function, the last number is the stop value. function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i params.</description>
     </item>
     
