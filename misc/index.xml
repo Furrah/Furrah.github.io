@@ -6,7 +6,17 @@
     <description>Recent content in Miscellaneous on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jul 2022 09:05:09 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/misc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Oct 2022 20:55:56 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Simple Python Bounds Checker using Decorators</title>
+      <link>https://mybrainhertz.co.uk/python_decorator_bounds/</link>
+      <pubDate>Mon, 17 Oct 2022 20:55:56 +0100</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/python_decorator_bounds/</guid>
+      <description>A bounds checker you say? Every now and again you might need a bounds checker. I find that when you do, you need it a lot! I thought there must be a simple way to minimise bloated code. Fear no more as Python decorators are here to save the day!
+def bounds_checker(lower, upper): def wrap(func): def wrapped_f(*args): val = args[0] if val &amp;gt; upper: val = upper print(f&amp;#34;Set value is too high.</description>
+    </item>
+    
     <item>
       <title>PT RTD Calculator</title>
       <link>https://mybrainhertz.co.uk/pt1000/</link>
