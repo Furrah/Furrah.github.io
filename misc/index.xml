@@ -6,7 +6,17 @@
     <description>Recent content in Miscellaneous on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Nov 2022 08:29:45 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/misc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Nov 2022 12:45:45 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Growing Avocados</title>
+      <link>https://mybrainhertz.co.uk/growing_avocado/</link>
+      <pubDate>Fri, 25 Nov 2022 12:45:45 +0100</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/growing_avocado/</guid>
+      <description>Introduction I&amp;rsquo;ve just got back from the Isle of Skye in Scotland and have bought back 20 Avocado seeds left over from a weeks worth of communal meals. I&amp;rsquo;ve just moved to Oxford, although I am currently staying with my friend Adam in Abingdon and have decided to propagate the seeds in his apartment. Thanks Adam.
+14th September 2021 Tooth pick up the seeds and suspend in water. There is a better method for this which is suspending the seed from the top and not tripoding like I have done.</description>
+    </item>
+    
     <item>
       <title>Fungi</title>
       <link>https://mybrainhertz.co.uk/fungi/</link>
@@ -45,16 +55,6 @@ def bounds_checker(lower, upper): def wrap(func): def wrapped_f(*args): val = ar
       <guid>https://mybrainhertz.co.uk/ntc/</guid>
       <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   B: R2: R25: Vcc:        
  function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i Equations  Characterise the NTC thermistor using the Beta method. $$r_{\infty} = R_{25} \cdot exp \left(\frac{-B}{T_{25}}\right)$$</description>
-    </item>
-    
-    <item>
-      <title>Growing Avocados</title>
-      <link>https://mybrainhertz.co.uk/growing_avocado/</link>
-      <pubDate>Tue, 28 Sep 2021 17:51:45 +0100</pubDate>
-      
-      <guid>https://mybrainhertz.co.uk/growing_avocado/</guid>
-      <description>Introduction I&amp;rsquo;ve just got back from the Isle of Skye in Scotland and have bought back 20 Avocado seeds left over from a weeks worth of communal meals. I&amp;rsquo;ve just moved to Oxford, although I am currently staying with my friend Adam in Abingdon and have decided to propagate the seeds in his apartment. Thanks Adam.
-14th September 2021 Tooth pick up the seeds and suspend in water. There is a better method for this which is suspending the seed from the top and not tripoding like I have done.</description>
     </item>
     
     <item>
