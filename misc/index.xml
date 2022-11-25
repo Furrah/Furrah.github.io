@@ -6,7 +6,17 @@
     <description>Recent content in Miscellaneous on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Oct 2022 20:55:56 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/misc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 08:29:45 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fungi</title>
+      <link>https://mybrainhertz.co.uk/fungi/</link>
+      <pubDate>Thu, 24 Nov 2022 08:29:45 +0100</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/fungi/</guid>
+      <description>Introduction An attempt at identifying fungi. There&amp;rsquo;s a strong chance I am 99% wrong.
+Stinkhorn - Close to Greenham Common Nature Reserve - Berkshire Out walking with my friend Will searching for one of the last blooming orchids in the UK - Autumn Lady Tresses. We didn&amp;rsquo;t find any unfortunately but we did find these!     Chicken of the woods - Bagley Wood - Oxfordshire Apparently as the name suggests it tastes of chicken&amp;hellip; or at least is a good replacement for chicken!</description>
+    </item>
+    
     <item>
       <title>A Simple Python Bounds Checker using Decorators</title>
       <link>https://mybrainhertz.co.uk/python_decorator_bounds/</link>
@@ -35,16 +45,6 @@ def bounds_checker(lower, upper): def wrap(func): def wrapped_f(*args): val = ar
       <guid>https://mybrainhertz.co.uk/ntc/</guid>
       <description>label{ display: inline-block; float: left; clear: left; width: 100px; text-align: right; } input { display: inline-block; float: left; }   B: R2: R25: Vcc:        
  function makeArr(startValue, stopValue, cardinality) { var arr = []; var step = (stopValue - startValue) / (cardinality - 1); for (var i = 0; i Equations  Characterise the NTC thermistor using the Beta method. $$r_{\infty} = R_{25} \cdot exp \left(\frac{-B}{T_{25}}\right)$$</description>
-    </item>
-    
-    <item>
-      <title>Fungi</title>
-      <link>https://mybrainhertz.co.uk/fungi/</link>
-      <pubDate>Wed, 29 Sep 2021 08:29:45 +0100</pubDate>
-      
-      <guid>https://mybrainhertz.co.uk/fungi/</guid>
-      <description>Introduction An attempt at identifying fungi. There&amp;rsquo;s a strong chance I am 99% wrong.
-Stinkhorn - Close to Greenham Common Nature Reserve - Berkshire Out walking with my friend Will searching for one of the last blooming orchids in the UK - Autumn Lady Tresses. We didn&amp;rsquo;t find any unfortunately but we did find these!     Chicken of the woods - Bagley Wood - Oxfordshire Apparently as the name suggests it tastes of chicken&amp;hellip; or at least is a good replacement for chicken!</description>
     </item>
     
     <item>
