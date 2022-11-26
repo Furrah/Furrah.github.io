@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
   
-  <title></title>
+  <title>Mushroom Map</title>
   <style>
 .container {
   max-width: 900px;
@@ -242,115 +242,72 @@ if (!doNotTrack) {
     <div class="container">
       <main id="main">
       
+<h1>Mushroom Map</h1>
 
-<div id="home-jumbotron" class="jumbotron-fluid text-center">
-	<div class='container'>
-  <h1> Well lets take a look at it, Mr Gumby!</h1>
-  <p class="font-125">J. Spencer</p>
-</div>
-
-	
-		<p>
-		  <a class="font-125" href="/mushmap/">Mushroom Map</a>
-		  <br>
-		  
 
 <i data-feather="calendar"></i> <time datetime="2022-11-26">Nov 26, 2022</time>
 
-
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/growing_avocado/">Growing Avocados</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2022-11-25">Nov 25, 2022</time>
-
-
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/fungi/">Fungi</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2022-11-24">Nov 24, 2022</time>
+<br><br>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+<div id="map"></div>
+<style> #map { height: 800px; }</style>
+<script>
 
 
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/python_decorator_bounds/">A Simple Python Bounds Checker using Decorators</a>
-		  <br>
-		  
+function readFile(file)
+{
+    var f = new XMLHttpRequest();
+    f.open("GET", file, false);
+    f.onreadystatechange = function()
+    {
+        if(f.readyState === 4 && f.status == 200) // 4 == DONE
+        {
+            var res= f.responseText;
+            valueCallBack(res)   
+        }
+    }
+    f.send(null);
+}
 
-<i data-feather="calendar"></i> <time datetime="2022-10-17">Oct 17, 2022</time>
+readFile('/docs/mushroom_data.txt');
 
-
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/foraging/">Joe&#39;s Birthday Foraging Frenzy</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2022-09-11">Sep 11, 2022</time>
-
-
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/pt1000/">PT RTD Calculator</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2022-07-21">Jul 21, 2022</time>
+function valueCallBack(res){
 
 
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/ntc/">NTC Calculator</a>
-		  <br>
-		  
+	var map = L.map('map').setView([51.71851, -1.25758], 15);
 
-<i data-feather="calendar"></i> <time datetime="2022-07-18">Jul 18, 2022</time>
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
 
+	res = (res.split("\n"));
 
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/greenhouse/heating/">Heating</a>
-		  <br>
-		  
+	for (let i = 1; i < res.length -1; i++) {
+		var fungi = res[i].split(',');
 
-<i data-feather="calendar"></i> <time datetime="2022-06-07">Jun 7, 2022</time>
+		var markerB = L.marker([fungi[3], fungi[4]], {title: "This is a title"})
+			.addTo(map)
+			.bindPopup("<H3>" +fungi[0] + "</><img src=" + '/' + fungi[1] + "/>",{minWidth: 200})
+			.on('mouseover', function (e) {this.openPopup()})
+			.on('mouseout', function (e) {this.closePopup()});
+	}
 
-
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/greenhouse/build/">Build</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2022-06-06">Jun 6, 2022</time>
+}
 
 
-		</p>
-	
-		<p>
-		  <a class="font-125" href="/tofu-with-garlic-sauce/">Tofu With Garlic Sauce</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2022-05-26">May 26, 2022</time>
 
 
-		</p>
-	
-</div>
+
+</script><blockquote>
+</blockquote>
+
+
 
 
 
