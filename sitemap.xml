@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mybrainhertz.co.uk/</loc>
-    <lastmod>2022-12-10T17:10:22+00:00</lastmod>
+    <lastmod>2023-02-13T08:30:57+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mybrainhertz.co.uk/babaganoush/</loc>
+    <lastmod>2023-02-13T08:30:57+00:00</lastmod>
+  </url><url>
+    <loc>https://mybrainhertz.co.uk/food/</loc>
+    <lastmod>2023-02-13T08:30:57+00:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/growing_mushrooms/</loc>
     <lastmod>2022-12-10T17:10:22+00:00</lastmod>
@@ -44,9 +50,6 @@
   </url><url>
     <loc>https://mybrainhertz.co.uk/greenhouse/build/</loc>
     <lastmod>2022-06-06T22:09:55+01:00</lastmod>
-  </url><url>
-    <loc>https://mybrainhertz.co.uk/food/</loc>
-    <lastmod>2022-05-26T20:49:35+01:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/tofu-with-garlic-sauce/</loc>
     <lastmod>2022-05-26T20:49:35+01:00</lastmod>
@@ -141,7 +144,7 @@
     <loc>https://mybrainhertz.co.uk/food/middle-eastern/</loc>
     <lastmod>2020-06-23T00:41:48+01:00</lastmod>
   </url><url>
-    <loc>https://mybrainhertz.co.uk/food/chinese/</loc>
+    <loc>https://mybrainhertz.co.uk/food/asian/</loc>
     <lastmod>2020-06-23T00:41:47+02:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/food/misc/</loc>
