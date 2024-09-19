@@ -6,7 +6,18 @@
     <description>Recent content in Greenhouse on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jun 2022 15:49:20 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/greenhouse/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Sep 2024 15:56:29 +0200</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/greenhouse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mains Switch Over</title>
+      <link>https://mybrainhertz.co.uk/greenhouse/mains-switch-over/</link>
+      <pubDate>Sun, 15 Sep 2024 15:56:29 +0200</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/greenhouse/mains-switch-over/</guid>
+      <description>Introduction My dad has a large fish pond and would like to use the solar system to run the pumps, which require 150W of power. Can the solar system run the pumps 24/7?
+The capacity of the batteries is 170Ah at 24V which would provide 4kWh of energy if drained. However, in practice, the state of charge should never drop below 20%, leaving us with 3.26kWh of usable energy.
+This would run the pumps for 3.</description>
+    </item>
+    
     <item>
       <title>Heating</title>
       <link>https://mybrainhertz.co.uk/greenhouse/heating/</link>

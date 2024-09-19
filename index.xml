@@ -6,14 +6,63 @@
     <description>Recent content on Well lets take a look at it, Mr Gumby!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Aug 2023 10:28:11 +0100</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Sep 2024 15:56:29 +0200</lastBuildDate><atom:link href="https://mybrainhertz.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mains Switch Over</title>
+      <link>https://mybrainhertz.co.uk/greenhouse/mains-switch-over/</link>
+      <pubDate>Sun, 15 Sep 2024 15:56:29 +0200</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/greenhouse/mains-switch-over/</guid>
+      <description>Introduction My dad has a large fish pond and would like to use the solar system to run the pumps, which require 150W of power. Can the solar system run the pumps 24/7?
+The capacity of the batteries is 170Ah at 24V which would provide 4kWh of energy if drained. However, in practice, the state of charge should never drop below 20%, leaving us with 3.26kWh of usable energy.
+This would run the pumps for 3.</description>
+    </item>
+    
+    <item>
+      <title>Paneer</title>
+      <link>https://mybrainhertz.co.uk/paneer/</link>
+      <pubDate>Mon, 10 Jun 2024 22:39:32 +0100</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/paneer/</guid>
+      <description>This recipe makes about 250-300g of paneer.
+Ingredients  4 Pints of whole milk 4 Tablespoons of lemon juice  Method  Bring milk to boil and as it approaches bring it down to a simmer Add lemon juice and the milk with split into curds Collect curds and drain through a tea towel in a colander Refrigerate for 2-3 hours before use.  </description>
+    </item>
+    
+    <item>
+      <title>Elderflower Cordial</title>
+      <link>https://mybrainhertz.co.uk/elderflower_cordial/</link>
+      <pubDate>Mon, 27 May 2024 10:51:11 +0200</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/elderflower_cordial/</guid>
+      <description>Ingredients  25 Elderflower heads 1.5L water 1kg sugar Juice of 1 lemon  Method  Add the elderflower heads to the water and boil for 5 mins Steep for 24 hours Strain With musslin or a tea towel back into the saucepan removing all the plant matter add sugar, heat until dissolved. Add lemon juice in Store in steralised bottle.  </description>
+    </item>
+    
+    <item>
+      <title>Pak Choi &amp; Oyster Sauce</title>
+      <link>https://mybrainhertz.co.uk/pak_choi_oyster/</link>
+      <pubDate>Sun, 26 May 2024 12:32:45 +0200</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/pak_choi_oyster/</guid>
+      <description>The outcome of this is not what it should look like but it tasted great so who cares!
+Ingredients  1 tablespoon soy sauce 3 tablespoons oyster sauce Pinch of sugar 1 tablespoon olive oil 4 garlic gloves finely chopped 5 pak choi  Method  Blanch pak choi for 30 seconds Fry garlic in oil for 30 seconds Add soy sauce, oyster sauce, and sugar. Add blanched pak choi to sauce  A Lil Story Sam had just started her job at CERN in Switzerland and I had just finished building the Bluehouse.</description>
+    </item>
+    
+    <item>
+      <title>The Bluehouse</title>
+      <link>https://mybrainhertz.co.uk/bluehouse/</link>
+      <pubDate>Mon, 06 May 2024 10:06:43 +0200</pubDate>
+      
+      <guid>https://mybrainhertz.co.uk/bluehouse/</guid>
+      <description>The Dream In September 2022 Sam and I bought our first house together. We were now proud owners of a 1950&amp;rsquo;s council house and we could do anything we wanted. I had always dreamed of having my own greenhouse and on the morning of the 15th of April 2023 Sam had found 100s of century-old light frames for sale at a local farm for just 1 pound each, so, of course, we went down to take a look.</description>
+    </item>
+    
     <item>
       <title>Chestnut Map</title>
       <link>https://mybrainhertz.co.uk/chestnut_map/</link>
       <pubDate>Sun, 06 Aug 2023 10:28:11 +0100</pubDate>
       
       <guid>https://mybrainhertz.co.uk/chestnut_map/</guid>
-      <description>   #map { height: 800px; }  function readFile(file) { var f = new XMLHttpRequest(); f.open(&#34;GET&#34;, file, false); f.onreadystatechange = function() { if(f.readyState === 4 &amp;&amp; f.status == 200) // 4 == DONE { var res= f.responseText; valueCallBack(res) } } f.send(null); } readFile(&#39;/docs/chestnut_data.txt&#39;); function valueCallBack(res){ var map = L.map(&#39;map&#39;).setView([51.71851, -1.25758], 15); L.tileLayer(&#39;https://tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, { maxZoom: 22, // was 19 attribution: &#39;&amp;copy; OpenStreetMap&#39; }).addTo(map); res = (res.split(&#34;\n&#34;)); for (let i = 1; i   </description>
+      <description>#map { height: 800px; }  var marker; // Declare marker globally var map; // Declare map globally function readFile(file) { var f = new XMLHttpRequest(); f.open(&#34;GET&#34;, file, false); f.onreadystatechange = function() { if (f.readyState === 4 &amp;&amp; f.status == 200) { var res = f.responseText; valueCallBack(res); } }; f.send(null); } readFile(&#39;/docs/chestnut_data.txt&#39;); function updateMarker() { // Get current location if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(function(position) { var pos = { lat: position.</description>
     </item>
     
     <item>
@@ -41,7 +90,7 @@ Required Items Buckets I bought 2x 25L buckets with lids for £13.69 each. Tradi
       <pubDate>Sat, 26 Nov 2022 16:50:40 +0000</pubDate>
       
       <guid>https://mybrainhertz.co.uk/mushmap/</guid>
-      <description>#map { height: 800px; }  function readFile(file) { var f = new XMLHttpRequest(); f.open(&#34;GET&#34;, file, false); f.onreadystatechange = function() { if(f.readyState === 4 &amp;&amp; f.status == 200) // 4 == DONE { var res= f.responseText; valueCallBack(res) } } f.send(null); } readFile(&#39;/docs/mushroom_data.txt&#39;); function valueCallBack(res){ var map = L.map(&#39;map&#39;).setView([51.71851, -1.25758], 15); L.tileLayer(&#39;https://tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, { maxZoom: 22, // was 19 attribution: &#39;&amp;copy; OpenStreetMap&#39; }).addTo(map); res = (res.split(&#34;\n&#34;)); for (let i = 1; i &#34;</description>
+      <description>#map { height: 800px; }  var map; var marker; function readFile(file) { var f = new XMLHttpRequest(); f.open(&#34;GET&#34;, file, false); f.onreadystatechange = function() { if (f.readyState === 4 &amp;&amp; f.status == 200) { var res = f.responseText; valueCallBack(res); } }; f.send(null); } readFile(&#39;/docs/mushroom_data.txt&#39;); function updateMarker() { // Get current location if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(function(position) { var pos = { lat: position.coords.latitude, lng: position.coords.longitude }; // Update marker position marker.</description>
     </item>
     
     <item>
