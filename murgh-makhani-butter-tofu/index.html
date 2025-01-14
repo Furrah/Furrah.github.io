@@ -7,7 +7,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.139.3">
   
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
@@ -215,17 +215,20 @@ body {
 
 
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-8PKWFQVGKH', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8PKWFQVGKH');
+        }
+      </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
@@ -378,6 +381,8 @@ I also added 2 white onions to the sauce base.</p>
 <img src="/food/images/20191102_202440-2.jpg" alt="Curry"><br><br>
 <img src="/food/images/20191102_202450-2.jpg" alt="Curry"><br><br>
 <img src="/food/images/20191102_210224-2.jpg" alt="Curry"><br><br></p>
+
+
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">

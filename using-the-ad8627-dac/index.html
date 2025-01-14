@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.139.3">
   
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
@@ -211,17 +211,20 @@ body {
 
 
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-8PKWFQVGKH', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8PKWFQVGKH');
+        }
+      </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
@@ -308,30 +311,30 @@ The DAC we are interested in is the 12 bit AD5627RBRMZ which has a 5ppm/˚C inte
 <p>The 7 bit address is set by the fist 5 MSBs 00011 and the state of the ADDR pin.</p>
 <center>
 <table>
-<thead>
-<tr>
-<th>ADDR Pin Connection</th>
-<th style="text-align:center">A1</th>
-<th style="text-align:center">A0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>VDD</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-</tr>
-<tr>
-<td>No Connection</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0</td>
-</tr>
-<tr>
-<td>GND</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>ADDR Pin Connection</th>
+          <th style="text-align: center">A1</th>
+          <th style="text-align: center">A0</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>VDD</td>
+          <td style="text-align: center">0</td>
+          <td style="text-align: center">0</td>
+      </tr>
+      <tr>
+          <td>No Connection</td>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">0</td>
+      </tr>
+      <tr>
+          <td>GND</td>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">1</td>
+      </tr>
+  </tbody>
 </table>
 </center>
 <br>
@@ -360,6 +363,8 @@ Bit 2 should be set to zero for 3 byte operation of chip</p>
 <p>Data - 12 bits to make full scale value FFF so 50% voltage would be 7FF.</p>
 <p>last 4 bits should be set to 1 for operation - F</p>
 <p>3 bytes = 0x1F,0x7F,0xFF</p>
+
+
 
 
 <div id="disqus_thread"></div>

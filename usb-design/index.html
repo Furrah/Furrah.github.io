@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.139.3">
   
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
@@ -211,17 +211,20 @@ body {
 
 
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-8PKWFQVGKH', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8PKWFQVGKH');
+        }
+      </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
@@ -339,7 +342,7 @@ is designed to protect Input/Output (I/O) ports that are sensitive to capacitive
 </p>
 <h2 id="microstrip-design">Microstrip Design</h2>
 <p><a href=https://www.analog.com/en/analog-dialogue/articles/switching-in-usb-consumer-applications.html target="_blank">USB Design</a>
-requires 45 Ohm single ended traces with a differential impedance of 90 Ohm. I like to use the calculators from <a href="http://www.mantaro.com">www.mantaro.com</a> to design microstrip lines. The differential microstrip calculator can be found <a href=https://www.mantaro.com/resources/impedance-calculator.htm
+requires 45 Ohm single ended traces with a differential impedance of 90 Ohm. I like to use the calculators from <a href="https://www.mantaro.com">www.mantaro.com</a> to design microstrip lines. The differential microstrip calculator can be found <a href=https://www.mantaro.com/resources/impedance-calculator.htm
 target="_blank">here.</a>
 The table below shows some initial design parameters to start the design.</p>
 <table class="w3-table-all w3-card-4" table style="width:50%" align="center">
@@ -381,6 +384,8 @@ The table below shows some initial design parameters to start the design.</p>
   </tr>
 </table>  
 <br>
+
+
 
 
 <div id="disqus_thread"></div>

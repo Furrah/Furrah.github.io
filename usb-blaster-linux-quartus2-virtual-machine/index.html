@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.139.3">
   
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
@@ -211,17 +211,20 @@ body {
 
 
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-8PKWFQVGKH', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8PKWFQVGKH');
+        }
+      </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
@@ -279,32 +282,32 @@ if (!doNotTrack) {
 <br><br>
 <p>SOURCE: <a href="https://stackoverflow.com/questions/18704913/unable-to-lock-chain-insufficient-port-permissions">https://stackoverflow.com/questions/18704913/unable-to-lock-chain-insufficient-port-permissions</a></p>
 <p>If when jtagconfig is ran</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">1<span style="color:#666">)</span> USB-Blaster varient <span style="color:#666">[</span>2-1<span style="color:#666">]</span>
-	unable to lock chain<span style="color:#666">(</span>Insufficient port permissions<span style="color:#666">)</span>
-</code></pre></div><p>is returned and Quartus cant program your FPGA. The following steps should fix this problem. An amazing resource on setting up Quartus and other Altera related design software is
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1<span style="color:#666">)</span> USB-Blaster varient <span style="color:#666">[</span>2-1<span style="color:#666">]</span>
+</span></span><span style="display:flex;"><span>	unable to lock chain<span style="color:#666">(</span>Insufficient port permissions<span style="color:#666">)</span>
+</span></span></code></pre></div><p>is returned and Quartus cant program your FPGA. The following steps should fix this problem. An amazing resource on setting up Quartus and other Altera related design software is
 <a href=https://wiki.archlinux.org/index.php/Altera_Design_Software  target="_blank"> Altera Design Software  </a></p>
 <p>Before a USB Blaster can be used its jtag rules and permissions must be configured.</p>
 <p>First kill jtagd.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo killall -9 jtagd
-</code></pre></div><p>If jtagconfig is ran whilst jtagd is already running then jtagconfig will have no effect.
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo killall -9 jtagd
+</span></span></code></pre></div><p>If jtagconfig is ran whilst jtagd is already running then jtagconfig will have no effect.
 jtagd and jtagconfig can be found in</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/altera/3.1/quartus/bin 
-</code></pre></div><p>And can be executed using</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./jtagd 
-./jtagconfig
-</code></pre></div><p>As root create file /etc/udev/rules.d/51-altera-usb-blaster.rules</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/altera/3.1/quartus/bin 
+</span></span></code></pre></div><p>And can be executed using</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./jtagd 
+</span></span><span style="display:flex;"><span>./jtagconfig
+</span></span></code></pre></div><p>As root create file /etc/udev/rules.d/51-altera-usb-blaster.rules</p>
 <p>Inside the file, include</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6001&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
-<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6002&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
-<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6003&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
-<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6010&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
-<span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6810&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
-</code></pre></div><p>The five idProducts are all the known USB-Blaster Download Cable USB product IDs (for the Altera vendor ID, 0x09fb).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6001&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6002&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6003&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6010&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb60d5">SUBSYSTEM</span><span style="color:#666">==</span><span style="color:#4070a0">&#34;usb&#34;</span>, ATTR<span style="color:#666">{</span>idVendor<span style="color:#666">}==</span><span style="color:#4070a0">&#34;09fb&#34;</span>, ATTR<span style="color:#666">{</span>idProduct<span style="color:#666">}==</span><span style="color:#4070a0">&#34;6810&#34;</span>, <span style="color:#bb60d5">MODE</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;0666&#34;</span>
+</span></span></code></pre></div><p>The five idProducts are all the known USB-Blaster Download Cable USB product IDs (for the Altera vendor ID, 0x09fb).</p>
 <p>Then run</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo udevadm control --reload
-</code></pre></div><p>Now run jtagd.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./jtagd
-</code></pre></div><p>Before jtagconfig returned</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo udevadm control --reload
+</span></span></code></pre></div><p>Now run jtagd.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./jtagd
+</span></span></code></pre></div><p>Before jtagconfig returned</p>
 <ol>
 <li>USB-Blaster varient [2-1]
 unable to lock chain(Insufficient port permissions)</li>
@@ -319,6 +322,8 @@ unable to lock chain(Insufficient port permissions)</li>
 <p>Other useful resources <br>
 <a href="https://blog.atomminer.com/fighting-altera-usb-blaster-on-ubuntu/">https://blog.atomminer.com/fighting-altera-usb-blaster-on-ubuntu/</a>
 <a href="https://rileywood.me/2017/02/19/fpga_setup/">https://rileywood.me/2017/02/19/fpga_setup/</a></p>
+
+
 
 
 <div id="disqus_thread"></div>

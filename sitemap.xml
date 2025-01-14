@@ -3,17 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mybrainhertz.co.uk/</loc>
-    <lastmod>2024-09-15T15:56:29+02:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2025-01-13T21:55:50+01:00</lastmod>
+  </url><url>
+    <loc>https://mybrainhertz.co.uk/bao-bun/</loc>
+    <lastmod>2025-01-13T21:55:50+01:00</lastmod>
+  </url><url>
+    <loc>https://mybrainhertz.co.uk/food/</loc>
+    <lastmod>2025-01-13T21:55:50+01:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/greenhouse/</loc>
     <lastmod>2024-09-15T15:56:29+02:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/greenhouse/mains-switch-over/</loc>
     <lastmod>2024-09-15T15:56:29+02:00</lastmod>
-  </url><url>
-    <loc>https://mybrainhertz.co.uk/food/</loc>
-    <lastmod>2024-06-10T22:39:32+01:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/paneer/</loc>
     <lastmod>2024-06-10T22:39:32+01:00</lastmod>
@@ -351,10 +353,10 @@
     <loc>https://mybrainhertz.co.uk/tags/baking/</loc>
     <lastmod>2019-11-03T14:09:17+01:00</lastmod>
   </url><url>
-    <loc>https://mybrainhertz.co.uk/flapjack/</loc>
+    <loc>https://mybrainhertz.co.uk/tags/flapjack/</loc>
     <lastmod>2019-11-03T14:09:17+01:00</lastmod>
   </url><url>
-    <loc>https://mybrainhertz.co.uk/tags/flapjack/</loc>
+    <loc>https://mybrainhertz.co.uk/flapjack/</loc>
     <lastmod>2019-11-03T14:09:17+01:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/tags/adjustment/</loc>
@@ -411,10 +413,10 @@
     <loc>https://mybrainhertz.co.uk/murgh-makhani-butter-tofu/</loc>
     <lastmod>2019-10-28T19:04:15+01:00</lastmod>
   </url><url>
-    <loc>https://mybrainhertz.co.uk/fallfel/</loc>
+    <loc>https://mybrainhertz.co.uk/tags/falafel/</loc>
     <lastmod>2019-10-27T23:00:57+01:00</lastmod>
   </url><url>
-    <loc>https://mybrainhertz.co.uk/tags/falafel/</loc>
+    <loc>https://mybrainhertz.co.uk/fallfel/</loc>
     <lastmod>2019-10-27T23:00:57+01:00</lastmod>
   </url><url>
     <loc>https://mybrainhertz.co.uk/tags/wraps/</loc>

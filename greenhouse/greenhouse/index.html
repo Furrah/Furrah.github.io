@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.89.4" />
+  <meta name="generator" content="Hugo 0.139.3">
   
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
@@ -211,17 +211,20 @@ body {
 
 
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-8PKWFQVGKH', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PKWFQVGKH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8PKWFQVGKH');
+        }
+      </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
@@ -332,18 +335,18 @@ It&rsquo;s a good start and I can obviously add more batteries should it be requ
 </ul>
 <p>In the manual for the charge controller the maximum PV Array power is 1560W, however, it can only output 1kW. This means in summer the system will be saturated but in the winter it will allow it to get a little extra boost when the dark days come rolling in.</p>
 <p>On page 7 of the manual found <a href="https://www.epever.com/upload/cert/file/1811/Tracer-AN-SMS-EL-V1.0.pdf">here</a> it says</p>
-<pre tabindex="0"><code>&quot;Multiple same models of controllers can be installed in parallel on the same battery bank 
-to achieve higher charging current. Each controller must have its own solar module(s)&quot;
+<pre tabindex="0"><code>&#34;Multiple same models of controllers can be installed in parallel on the same battery bank 
+to achieve higher charging current. Each controller must have its own solar module(s)&#34;
 </code></pre><p>I emailed Epever to make sure this could be done as I was dubious.</p>
 <p><strong>Me</strong></p>
-<pre tabindex="0"><code>&quot;Please could you confirm that multiple Tracer AN 4210 modules can be connected in parallel to the same 
+<pre tabindex="0"><code>&#34;Please could you confirm that multiple Tracer AN 4210 modules can be connected in parallel to the same 
 battery system. Are there any additional electronics that should be considered when installing?
 Thanks,
-Joe&quot;
+Joe&#34;
 </code></pre><p><strong>Epever</strong></p>
-<pre tabindex="0"><code>&quot;Hi Joe Spencer,
+<pre tabindex="0"><code>&#34;Hi Joe Spencer,
 
-Generally, we don't recommend to parallel connect multiple controllers. 
+Generally, we don&#39;t recommend to parallel connect multiple controllers. 
 Because of they have detective deviation,maybe affect each other when battery is almost charge full, 
 such as one more, one little. It is not good for your battery bank.
 
@@ -353,7 +356,7 @@ Thanks in advance and have a wonderful day!
 
 Best Regards
 Bianca Chen
-EPEVER Support&quot;
+EPEVER Support&#34;
 </code></pre><p>Damn.</p>
 <h2 id="basic-design">Basic Design</h2>
 <p>All the essential ingredients have been selected. They now need to be wired together in the safest way possible.</p>
@@ -383,6 +386,8 @@ battery not greater than 150 mm
 <h2 id="concluding-thoughts">Concluding Thoughts</h2>
 <p>This is the bare essentials required to charge a 24V battery from solar. If I am to sell back to the grid I will mostly need to go to a much higher voltage which will require lots of panels in series with one another. An example is the <a href="https://www.fronius.com/en-gb/uk/solar-energy/installers-partners/technical-data/all-products/inverters/fronius-symo/fronius-symo-5-0-3-m">Fronius Symo 5.0-3-m</a> This requires a minimum DC input voltage of 200V to feed into the grid with a nominal voltage of 595V! This is great news for keeping the cable size down but bad news for possible shadowing effects on the panels. I will also need 8 more panels&hellip;</p>
 <p>Please see the next post: <a href="/greenhouse/build">Build</a> to see some pictures of the build!</p>
+
+
 
 
 <div id="disqus_thread"></div>
