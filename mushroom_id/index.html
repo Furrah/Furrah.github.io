@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
   
-  <title>Travel</title>
+  <title>Fungi Identify Neural Network</title>
   <style>
 
  
@@ -612,159 +612,48 @@ body.light-mode .day-btn:hover {
     <div class="container">
       <main id="main">
       
+<h1>Fungi Identify Neural Network</h1>
 
-<div id="home-jumbotron" class="jumbotron-fluid text-center">
-	<div class='container'>
-  <h1> Well lets take a look at it, Mr Gumby!</h1>
-  <p class="font-125">J. Spencer</p>
-</div>
-
-
-
-	
-
-
-
-		   <a class="font-125" href="/mushroom_id/">Fungi Identify Neural Network</a>
-		  <br>
-		  
 
 <i data-feather="calendar"></i> <time datetime="2025-12-09">Dec 9, 2025</time>
 
-		  
- 
-	</p>
-
-	
-
-
-
-		   <a class="font-125" href="/kiwi_hot_sauce/">Kiwi Hot Sauce</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-12-05">Dec 5, 2025</time>
-
-		  
- 
-	</p>
-
-	
+<br><br>
+<h1 id="there-must-be-a-dataset-somewhere">There must be a dataset somewhere?</h1>
+<p>Over the last few years I have been taking photos of almost every mushroom that I&rsquo;ve seen but I don&rsquo;t always know what they are. There are many mushroom apps out there now and most of the good ones require some form of subscription. I woke up this morning thinking that there must be a compiled dataset somewhere for fungi, and there is! Hello FungiTastic!</p>
+<h1 id="there-must-be-a-pre-trained-model-somewhere">There must be a pre-trained model somewhere?</h1>
+<p>Ok, brilliant, I&rsquo;ve got the dataset, but someone must have trained a network on this data already and make it publicly available? Hello Bohemian Visual Recognition Alliance!</p>
+<h1 id="what-is-this-mushroom">What is this mushroom?</h1>
+<p>The model was super simple to get working. The only thing i couldn&rsquo;t figure out was how to actually get the species name from the output. I seem to be able to only get the class_id. FungiTastic provide the labelled training dataset so a map between class_id and species was easy enough to generate. I tested it out on a bunch of images I had. Here you can see if predicted that this photo of a Fly Agaric is indeed Amanita muscaria, also known as Fly Agaric with 100% certainty!</p>
+<p align="center"> 
+<img src="/misc/images/fungi/fly_agaric/IMG_5224.jpeg" alt="drawing" width="600" loading="lazy"/>
+</p>
+<pre tabindex="0"><code>IMG_5224.jpeg → Amanita muscaria    (1.000)
+</code></pre><h1 id="files">Files</h1>
+<a href="/docs/fungi_nn/fungi_nn.zip" download="fungi_nn.zip" class="download-link">
+  fungi_nn.zip
+  <i data-feather="download" style="margin-left:6px;"></i>
+</a>
 
 
 
-		   <a class="font-125" href="/chilli_oil/">Crispy Chilli Oil</a>
-		  <br>
-		  
 
-<i data-feather="calendar"></i> <time datetime="2025-12-04">Dec 4, 2025</time>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
 
-		  
- 
-	</p>
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
 
-	
-
-
-
-		   <a class="font-125" href="/lora/">Playing with LoRa</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-11-28">Nov 28, 2025</time>
-
-		  
- 
-	</p>
-
-	
-
-
-
-		   <a class="font-125" href="/travel/china/china_day4/">China Day 4</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-11-24">Nov 24, 2025</time>
-
-		  
- 
-	</p>
-
-	
-
-
-
-		   <a class="font-125" href="/travel/china/china_day3/">China Day 3</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-11-24">Nov 24, 2025</time>
-
-		  
- 
-	</p>
-
-	
-
-
-
-		   <a class="font-125" href="/travel/china/china_day2/">China Day 2</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-11-24">Nov 24, 2025</time>
-
-		  
- 
-	</p>
-
-	
-
-
-
-		   <a class="font-125" href="/travel/china/china/">China</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-11-19">Nov 19, 2025</time>
-
-		  
- 
-	</p>
-
-	
-
-
-
-		   <a class="font-125" href="/squash-soup/">Squash Soup</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-11-15">Nov 15, 2025</time>
-
-		  
- 
-	</p>
-
-	
-
-
-
-		   <a class="font-125" href="/peach_chutney/">Peach &amp; Chilli Chutney</a>
-		  <br>
-		  
-
-<i data-feather="calendar"></i> <time datetime="2025-09-10">Sep 10, 2025</time>
-
-		  
- 
-	</p>
-
-	
-</div>
-
-
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'www-mybrainhertz-co-uk';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 
