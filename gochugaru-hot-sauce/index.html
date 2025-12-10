@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://mybrainhertz.co.uk/css/bootstrap.min.css">
   
   
-  <title>Rules and Permissions for USB Blaster Setup in Linux Virtual Machine</title>
+  <title>Gochugaru Hot Sauce</title>
   <style>
 
  
@@ -582,8 +582,8 @@ body.light-mode.single-page a:hover {
 </head>  
 
 
+  
   <body class="single-page">
-    
         <div id="nav-border" class="container">
   <nav id="nav" class="nav justify-content-center align-items-center">
 
@@ -626,59 +626,67 @@ body.light-mode.single-page a:hover {
   </nav>
 </div>
  
+
+
+
         
     <div class="container">
       <main id="main">
       
-<h1>Rules and Permissions for USB Blaster Setup in Linux Virtual Machine</h1>
+
+<h1>Gochugaru Hot Sauce</h1>
 
 
-<i data-feather="calendar"></i> <time datetime="2020-03-22">Mar 22, 2020</time>
+<i data-feather="calendar"></i> <time datetime="2025-12-10">Dec 10, 2025</time>
 
+        
 <br><br>
-<p>SOURCE: <a href="https://stackoverflow.com/questions/18704913/unable-to-lock-chain-insufficient-port-permissions">https://stackoverflow.com/questions/18704913/unable-to-lock-chain-insufficient-port-permissions</a></p>
-<p>If when jtagconfig is ran</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1<span style="color:#56b6c2">)</span> USB-Blaster varient <span style="color:#56b6c2">[</span>2-1<span style="color:#56b6c2">]</span>
-</span></span><span style="display:flex;"><span>	unable to lock chain<span style="color:#56b6c2">(</span>Insufficient port permissions<span style="color:#56b6c2">)</span>
-</span></span></code></pre></div><p>is returned and Quartus cant program your FPGA. The following steps should fix this problem. An amazing resource on setting up Quartus and other Altera related design software is
-<a href=https://wiki.archlinux.org/index.php/Altera_Design_Software  target="_blank"> Altera Design Software  </a></p>
-<p>Before a USB Blaster can be used its jtag rules and permissions must be configured.</p>
-<p>First kill jtagd.</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo killall -9 jtagd
-</span></span></code></pre></div><p>If jtagconfig is ran whilst jtagd is already running then jtagconfig will have no effect.
-jtagd and jtagconfig can be found in</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/altera/3.1/quartus/bin 
-</span></span></code></pre></div><p>And can be executed using</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./jtagd 
-</span></span><span style="display:flex;"><span>./jtagconfig
-</span></span></code></pre></div><p>As root create file /etc/udev/rules.d/51-altera-usb-blaster.rules</p>
-<p>Inside the file, include</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e06c75">SUBSYSTEM</span><span style="color:#56b6c2">==</span><span style="color:#98c379">&#34;usb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idVendor<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;09fb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idProduct<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;6001&#34;</span>, <span style="color:#e06c75">MODE</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;0666&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e06c75">SUBSYSTEM</span><span style="color:#56b6c2">==</span><span style="color:#98c379">&#34;usb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idVendor<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;09fb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idProduct<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;6002&#34;</span>, <span style="color:#e06c75">MODE</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;0666&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e06c75">SUBSYSTEM</span><span style="color:#56b6c2">==</span><span style="color:#98c379">&#34;usb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idVendor<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;09fb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idProduct<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;6003&#34;</span>, <span style="color:#e06c75">MODE</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;0666&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e06c75">SUBSYSTEM</span><span style="color:#56b6c2">==</span><span style="color:#98c379">&#34;usb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idVendor<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;09fb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idProduct<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;6010&#34;</span>, <span style="color:#e06c75">MODE</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;0666&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e06c75">SUBSYSTEM</span><span style="color:#56b6c2">==</span><span style="color:#98c379">&#34;usb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idVendor<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;09fb&#34;</span>, ATTR<span style="color:#56b6c2">{</span>idProduct<span style="color:#56b6c2">}==</span><span style="color:#98c379">&#34;6810&#34;</span>, <span style="color:#e06c75">MODE</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;0666&#34;</span>
-</span></span></code></pre></div><p>The five idProducts are all the known USB-Blaster Download Cable USB product IDs (for the Altera vendor ID, 0x09fb).</p>
-<p>Then run</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo udevadm control --reload
-</span></span></code></pre></div><p>Now run jtagd.</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./jtagd
-</span></span></code></pre></div><p>Before jtagconfig returned</p>
+<p>This is a lacto fermented hot sauce! I used Gochugaru chilli peppers for this ferment which give a very mild hot sauce. A more common chilli for this type of ferment is the jalepeno</p>
+<h1 id="ingredients">Ingredients</h1>
+<ul>
+<li>30 Red chillis, heads removed and chopped lengthways</li>
+<li>1 Onion, roughly chopped</li>
+<li>12 Garlic, chopped in half</li>
+<li>Salt</li>
+<li>Water</li>
+<li>500ml Apple cider vinegar</li>
+</ul>
+<h1 id="method">Method</h1>
+<h2 id="1-fermentation">1. Fermentation</h2>
 <ol>
-<li>USB-Blaster varient [2-1]
-unable to lock chain(Insufficient port permissions)</li>
+<li>Sterilise Kilner jar in oven at 110C for 30 mins.</li>
+<li>Allow jar to cool and take note of the weight of the jar</li>
+<li>Add all the vegetables to the jar and fill remaining space with water</li>
+<li>Add 2.5% by weight of salt to the vegetables and water</li>
+<li>Leave for 2-3 weeks and allow to ferment, remembering to burp once a day.</li>
 </ol>
-<p>Now, it returns</p>
+<h2 id="2-bottle-up">2. Bottle up</h2>
 <ol>
-<li>USB-Blaster [2-1]
-020F70DD EP3C120/EP4CE115</li>
+<li>Strain the ferment and keep the brine to one side</li>
+<li>Blend the solids and then add the apple cider vinegar.</li>
+<li>Add 500ml of the brine back to the solids and taste.</li>
+<li>Add more brine or vinegar to taste.</li>
 </ol>
-<p>Go to Quartus II and open tools -&gt; programming</p>
-<p>In hardware setup the USB Blaster should be found as USB-Blaster and not USB-Blaster varient.</p>
-<p>Other useful resources <br>
-<a href="https://blog.atomminer.com/fighting-altera-usb-blaster-on-ubuntu/">https://blog.atomminer.com/fighting-altera-usb-blaster-on-ubuntu/</a>
-<a href="https://rileywood.me/2017/02/19/fpga_setup/">https://rileywood.me/2017/02/19/fpga_setup/</a></p>
-
+<h2 id="3-flavouring">3. Flavouring</h2>
+<h3 id="spices">Spices</h3>
+<ul>
+<li>1 tbsp cumin</li>
+<li>1 tbsp paprika</li>
+</ul>
+<h3 id="savoury--umami">Savoury / Umami</h3>
+<ul>
+<li>1 tbsp light soy sauce</li>
+<li>1 tbsp miso</li>
+</ul>
+<h3 id="fresh--bright">Fresh &amp; Bright</h3>
+<ul>
+<li>2 tbsp lime juice</li>
+<li>15 stems of coriander</li>
+<li>5 coriander stems with leaves</li>
+</ul>
+<p align="center"> 
+<img src="/food/images/gochugaru_hot_sauce/DSC_1543.avif" alt="drawing" width="600"/>
+</p>
 
 
 
@@ -753,7 +761,7 @@ toggle.addEventListener('click', () => {
   updateIcon();
 });
 </script>
-   
+  
     <script>
 function addCopyButtonToCode() {
   var allCodeBlocksElements = $("div.highlight pre");
@@ -796,6 +804,6 @@ $(document).ready(function() {
 
 
 
-</script>   
+</script>  
   </body>
 </html>
